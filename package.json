@@ -1,0 +1,50 @@
+{
+  "name": "portfolio-showcase",
+  "version": "2.0.0",
+  "description": "Interactive portfolio showcase with modern web technologies",
+  "main": "js/main.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint js/**/*.js",
+    "format": "prettier --write js/**/*.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "analyze": "vite build --mode analyze"
+  },
+  "keywords": [
+    "portfolio",
+    "showcase",
+    "interactive",
+    "web-development",
+    "flutter",
+    "laravel"
+  ],
+  "author": "John Developer",
+  "license": "MIT",
+  "devDependencies": {
+    "vite": "^4.4.0",
+    "eslint": "^8.40.0",
+    "prettier": "^2.8.8",
+    "jest": "^29.5.0",
+    "@babel/core": "^7.22.0",
+    "@babel/preset-env": "^7.22.0",
+    "babel-jest": "^29.5.0",
+    "rollup-plugin-visualizer": "^5.9.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "jest": {
+    "testEnvironment": "jsdom",
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    },
+    "moduleNameMapper": {
+      "^@/(.*)$": "<rootDir>/js/$1"
+    }
+  }
+}
