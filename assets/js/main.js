@@ -163,3 +163,18 @@ document.addEventListener('visibilitychange', () => {
 
 // Export for debugging
 window.App = { init, destroy, getState: () => appState };
+
+// Initialize project hover images
+document.addEventListener('DOMContentLoaded', () => {
+  const projectCards = document.querySelectorAll('.project-card');
+  
+  projectCards.forEach(card => {
+    const imageName = card.getAttribute('data-image');
+    if (imageName) {
+      const previewImage = card.querySelector('.preview-image');
+      if (previewImage) {
+        previewImage.style.backgroundImage = `url('assets/images/${imageName}')`;
+      }
+    }
+  });
+});

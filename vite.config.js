@@ -12,8 +12,8 @@ export default defineConfig(({ mode }) => ({
     rollupOptions: {
       output: {
         manualChunks: {
-          'translations': ['./js/modules/translations.js'],
-          'vendor': ['./js/modules/accessibility.js', './js/modules/event-handlers.js']
+          'translations': ['assets/js/modules/translations.js'],
+          'vendor': ['assets/js/modules/accessibility.js', 'assets/js/modules/event-handlers.js']
         }
       }
     },
