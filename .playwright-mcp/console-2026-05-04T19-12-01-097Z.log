@@ -1,4 +1,0 @@
-[   46551ms] TypeError: Cannot set properties of undefined (setting 'textContent')
-    at applyLanguage (http://localhost:8080/script.js:860:31)
-    at HTMLDocument.init (http://localhost:8080/script.js:343:5)
-[   48975ms] [ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://localhost:8080/favicon.ico:0

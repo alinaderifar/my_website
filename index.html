@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Software Developer</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -96,24 +96,6 @@
             to { transform: rotate(360deg); }
         }
 
-        /* Skip link for accessibility */
-        .skip-link {
-            position: absolute;
-            top: -40px;
-            left: 6px;
-            background: var(--primary);
-            color: white;
-            padding: 8px 16px;
-            border-radius: var(--radius-sm);
-            text-decoration: none;
-            z-index: 1001;
-            transition: top 0.3s ease;
-        }
-
-        .skip-link:focus {
-            top: 6px;
-        }
-
         /* Reduced motion */
         @media (prefers-reduced-motion: reduce) {
             * {
@@ -134,9 +116,6 @@
         <div class="loader-spinner"></div>
         <div class="loader-text">Loading experience...</div>
     </div>
-
-    <!-- Skip to main content link -->
-    <a href="#main" class="skip-link">Skip to main content</a>
 
     <!-- Navigation -->
     <nav class="navbar" role="navigation" aria-label="Main navigation">
@@ -216,35 +195,24 @@
                                                <div class="card-subtitle">+8% this week</div>
                                            </div>
                                        </div>
-                                       <div class="app-nav">
-                                           <div class="nav-item active">
-                                               <div class="nav-icon"></div>
-                                               <span class="nav-label">Home</span>
-                                           </div>
-                                           <div class="nav-item">
-                                               <div class="nav-icon"></div>
-                                               <span class="nav-label">Orders</span>
-                                           </div>
-                                       <polyline points="12 6 12 12 16 14"></polyline>
-                                   </svg>
-                               </div>
-                               <div>
-                                   <h4 data-i18n="about_highlight_2_title">Agile Methodology</h4>
-                                   <p data-i18n="about_highlight_2_desc">Scrum and iterative development</p>
-                               </div>
-                           </div>
-                           <div class="highlight-item">
-                               <div class="highlight-icon">
-                                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                       <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                                       <circle cx="9" cy="7" r="4"></circle>
-                                       <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                                       <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                                   </svg>
-                               </div>
-                               <div>
-                                   <h4 data-i18n="about_highlight_3_title">Team Collaboration</h4>
-                                   <p data-i18n="about_highlight_3_desc">Effective communication and leadership</p>
+                                        <div class="app-nav">
+                                            <div class="nav-item active">
+                                                <div class="nav-icon"></div>
+                                                <span class="nav-label">Home</span>
+                                            </div>
+                                            <div class="nav-item">
+                                                <div class="nav-icon"></div>
+                                                <span class="nav-label">Orders</span>
+                                            </div>
+                                            <div class="nav-item">
+                                                <div class="nav-icon"></div>
+                                                <span class="nav-label">search</span>
+                                            </div>
+                                            <div class="nav-item">
+                                                <div class="nav-icon"></div>
+                                                <span class="nav-label">Profile</span>
+                                            </div>
+                                        </div>
                                </div>
                            </div>
                        </div>
@@ -396,129 +364,271 @@
                        </div>
                        
                        <!-- Laravel Skills -->
-                       <div class="skill-category laravel">
-                           <div class="skill-category-header">
-                               <div class="skill-category-icon">
-                                   <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                       <path d="M4 12L20 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                                       <path d="M4 6L20 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                                       <path d="M4 18L20 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                                       <path d="M8 6V18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                                       <path d="M12 6V18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                                       <path d="M16 6V18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                                   </svg>
-                               </div>
-                               <h3 data-i18n="skills_laravel_title">Laravel Development</h3>
-                           </div>
-                           <div class="skill-tree-container">
-                               <h4>Laravel Skill Tree</h4>
-                               <div class="animated-skill-tree">
-                                   <div class="skill-step">
-                                       <div class="step-connector">
-                                           <div class="step-line"></div>
-                                       </div>
-                                       <div class="step-node">
-                                           <div class="step-icon">
-                                               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                                   <path d="M4 12L20 12" stroke-width="3"/>
-                                                   <path d="M4 6L20 6"/>
-                                                   <path d="M4 18L20 18"/>
-                                                   <path d="M8 6V18"/>
-                                               </svg>
-                                           </div>
-                                           <div class="step-content">
-                                               <h5>Laravel Expert</h5>
-                                               <p>PHP framework mastery</p>
-                                               <div class="skill-progress-bar">
-                                                   <div class="skill-progress-fill" style="--progress: 90%"></div>
+                        <div class="skill-category laravel">
+                            <div class="skill-category-header">
+                                <div class="skill-category-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4 12L20 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                        <path d="M4 6L20 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                        <path d="M4 18L20 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                        <path d="M8 6V18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                        <path d="M12 6V18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                        <path d="M16 6V18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                    </svg>
+                                </div>
+                                <h3 data-i18n="skills_laravel_title">Laravel Development</h3>
+                            </div>
+                            <div class="skill-tree-container">
+                                <h4>Laravel Skill Tree</h4>
+                                <div class="animated-skill-tree">
+                                    <div class="skill-step">
+                                        <div class="step-connector">
+                                            <div class="step-line"></div>
+                                        </div>
+                                        <div class="step-node">
+                                            <div class="step-icon">
+                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <path d="M4 12L20 12" stroke-width="3"/>
+                                                    <path d="M4 6L20 6"/>
+                                                    <path d="M4 18L20 18"/>
+                                                    <path d="M8 6V18"/>
+                                                </svg>
+                                            </div>
+                                            <div class="step-content">
+                                                <h5>Laravel Expert</h5>
+                                                <p>PHP framework mastery</p>
+                                                <div class="skill-progress-bar">
+                                                    <div class="skill-progress-fill" style="--progress: 90%"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-step">
+                                        <div class="step-connector">
+                                            <div class="step-line"></div>
+                                        </div>
+                                        <div class="step-node">
+                                            <div class="step-icon">
+                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <polyline points="4 4 12 12 22 2"/>
+                                                    <polyline points="22 16 12 12 8 16"/>
+                                                    <polyline points="8 8 2 22"/>
+                                                </svg>
+                                            </div>
+                                            <div class="step-content">
+                                                <h5>RESTful APIs</h5>
+                                                <p>Clean architecture design</p>
+                                                <div class="skill-progress-bar">
+                                                    <div class="skill-progress-fill" style="--progress: 88%"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-step">
+                                        <div class="step-connector">
+                                            <div class="step-line"></div>
+                                        </div>
+                                        <div class="step-node">
+                                            <div class="step-icon">
+                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <ellipse cx="12" cy="5" rx="9" ry="3"/>
+                                                    <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+                                                </svg>
+                                            </div>
+                                            <div class="step-content">
+                                                <h5>MySQL/PostgreSQL</h5>
+                                                <p>Database optimization</p>
+                                                <div class="skill-progress-bar">
+                                                    <div class="skill-progress-fill" style="--progress: 85%"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-step">
+                                        <div class="step-connector">
+                                            <div class="step-line"></div>
+                                        </div>
+                                        <div class="step-node">
+                                            <div class="step-icon">
+                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                                    <circle cx="9" cy="7" r="4"/>
+                                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                                </svg>
+                                            </div>
+                                            <div class="step-content">
+                                                <h5>Redis/Caching</h5>
+                                                <p>Performance optimization</p>
+                                                <div class="skill-progress-bar">
+                                                    <div class="skill-progress-fill" style="--progress: 80%"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-step">
+                                        <div class="step-node">
+                                            <div class="step-icon">
+                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <path d="M9 11l3 3L22 4"/>
+                                                    <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+                                                </svg>
+                                            </div>
+                                            <div class="step-content">
+                                                <h5>PHPUnit Testing</h5>
+                                                <p>TDD & quality assurance</p>
+                                                <div class="skill-progress-bar">
+                                                     <div class="skill-progress-fill" style="--progress: 78%"></div>
                                                </div>
-                                           </div>
-                                       </div>
-                                   </div>
-                                   <div class="skill-step">
-                                       <div class="step-connector">
-                                           <div class="step-line"></div>
-                                       </div>
-                                       <div class="step-node">
-                                           <div class="step-icon">
-                                               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                                   <polyline points="4 4 12 12 22 2"/>
-                                                   <polyline points="22 16 12 12 8 16"/>
-                                                   <polyline points="8 8 2 22"/>
-                                               </svg>
-                                           </div>
-                                           <div class="step-content">
-                                               <h5>RESTful APIs</h5>
-                                               <p>Clean architecture design</p>
-                                               <div class="skill-progress-bar">
-                                                   <div class="skill-progress-fill" style="--progress: 88%"></div>
-                                               </div>
-                                           </div>
-                                       </div>
-                                   </div>
-                                   <div class="skill-step">
-                                       <div class="step-connector">
-                                           <div class="step-line"></div>
-                                       </div>
-                                       <div class="step-node">
-                                           <div class="step-icon">
-                                               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                                   <ellipse cx="12" cy="5" rx="9" ry="3"/>
-                                                   <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
-                                               </svg>
-                                           </div>
-                                           <div class="step-content">
-                                               <h5>MySQL/PostgreSQL</h5>
-                                               <p>Database optimization</p>
-                                               <div class="skill-progress-bar">
-                                                   <div class="skill-progress-fill" style="--progress: 85%"></div>
-                                               </div>
-                                           </div>
-                                       </div>
-                                   </div>
-                                   <div class="skill-step">
-                                       <div class="step-connector">
-                                           <div class="step-line"></div>
-                                       </div>
-                                       <div class="step-node">
-                                           <div class="step-icon">
-                                               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                                   <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                                                   <circle cx="9" cy="7" r="4"/>
-                                                   <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-                                                   <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-                                               </svg>
-                                           </div>
-                                           <div class="step-content">
-                                               <h5>Redis/Caching</h5>
-                                               <p>Performance optimization</p>
-                                               <div class="skill-progress-bar">
-                                                   <div class="skill-progress-fill" style="--progress: 80%"></div>
-                                               </div>
-                                           </div>
-                                       </div>
-                                   </div>
-                                   <div class="skill-step">
-                                       <div class="step-node">
-                                           <div class="step-icon">
-                                               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                                   <path d="M9 11l3 3L22 4"/>
-                                                   <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
-                                               </svg>
-                                           </div>
-                                           <div class="step-content">
-                                               <h5>PHPUnit Testing</h5>
-                                               <p>TDD & quality assurance</p>
-                                               <div class="skill-progress-bar">
-                                                    <div class="skill-progress-fill" style="--progress: 78%"></div>
-                                              </div>
-                                       </div>
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-               </div>
-           </section>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                            </div>
+                        </div>
+
+                        <!-- React.js Skills -->
+                        <div class="skill-category react">
+                            <div class="skill-category-header">
+                                <div class="skill-category-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                                        <path d="M8.5 12.5L11 9L13.5 11.5L17.5 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M8 15.5L5.5 18C4.5 19 3 19 2 18C1 17 1 15.5 2 14.5L4.5 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                        <path d="M16 8.5L18.5 6C19.5 5 21 5 22 6C23 7 23 8.5 22 9.5L19.5 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                        <circle cx="8.5" cy="15.5" r="1.5" fill="currentColor"/>
+                                        <circle cx="15.5" cy="8.5" r="1.5" fill="currentColor"/>
+                                    </svg>
+                                </div>
+                                <h3 data-i18n="skills_react_title">React.js Development</h3>
+                            </div>
+                            <div class="skill-tree-container">
+                                <h4>React Skill Tree</h4>
+                                <div class="animated-skill-tree">
+                                    <div class="skill-step">
+                                        <div class="step-connector">
+                                            <div class="step-line"></div>
+                                        </div>
+                                        <div class="step-node">
+                                            <div class="step-icon">
+                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <circle cx="12" cy="12" r="10"/>
+                                                    <path d="M8.5 12.5L11 9L13.5 11.5L17.5 7.5"/>
+                                                </svg>
+                                            </div>
+                                            <div class="step-content">
+                                                <h5>React Mastery</h5>
+                                                <p>Component-based architecture</p>
+                                                <div class="skill-progress-bar">
+                                                    <div class="skill-progress-fill" style="--progress: 92%"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-step">
+                                        <div class="step-connector">
+                                            <div class="step-line"></div>
+                                        </div>
+                                        <div class="step-node">
+                                            <div class="step-icon">
+                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <polyline points="4 17 10 11 4 5"/>
+                                                    <line x1="12" y1="19" x2="20" y2="19"/>
+                                                </svg>
+                                            </div>
+                                            <div class="step-content">
+                                                <h5>React Hooks</h5>
+                                                <p>useState, useEffect, custom hooks</p>
+                                                <div class="skill-progress-bar">
+                                                    <div class="skill-progress-fill" style="--progress: 90%"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-step">
+                                        <div class="step-connector">
+                                            <div class="step-line"></div>
+                                        </div>
+                                        <div class="step-node">
+                                            <div class="step-icon">
+                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                                                    <line x1="8" y1="21" x2="16" y2="21"/>
+                                                    <line x1="12" y1="17" x2="12" y2="21"/>
+                                                </svg>
+                                            </div>
+                                            <div class="step-content">
+                                                <h5>React Native</h5>
+                                                <p>Cross-platform mobile apps</p>
+                                                <div class="skill-progress-bar">
+                                                    <div class="skill-progress-fill" style="--progress: 85%"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-step">
+                                        <div class="step-connector">
+                                            <div class="step-line"></div>
+                                        </div>
+                                        <div class="step-node">
+                                            <div class="step-icon">
+                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                                                    <path d="M2 17l10 5 10-5"/>
+                                                    <path d="M2 12l10 5 10-5"/>
+                                                </svg>
+                                            </div>
+                                            <div class="step-content">
+                                                <h5>State Management</h5>
+                                                <p>Redux, Context API, Zustand</p>
+                                                <div class="skill-progress-bar">
+                                                    <div class="skill-progress-fill" style="--progress: 88%"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-step">
+                                        <div class="step-connector">
+                                            <div class="step-line"></div>
+                                        </div>
+                                        <div class="step-node">
+                                            <div class="step-icon">
+                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <circle cx="12" cy="12" r="3"/>
+                                                    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                                                </svg>
+                                            </div>
+                                            <div class="step-content">
+                                                <h5>Next.js</h5>
+                                                <p>SSR, SSG, API routes</p>
+                                                <div class="skill-progress-bar">
+                                                    <div class="skill-progress-fill" style="--progress: 82%"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-step">
+                                        <div class="step-node">
+                                            <div class="step-icon">
+                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                                                </svg>
+                                            </div>
+                                            <div class="step-content">
+                                                <h5>TypeScript</h5>
+                                                <p>Type-safe development</p>
+                                                <div class="skill-progress-bar">
+                                                    <div class="skill-progress-fill" style="--progress: 86%"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
            
            <section id="experience" class="section" aria-labelledby="experience-title">
              <div class="container">
@@ -763,6 +873,6 @@
     </footer>
 
     <!-- Load main application script -->
-    <script type="module" src="js/main.js"></script>
+    <script type="module" src="assets/js/main.js"></script>
 </body>
 </html>

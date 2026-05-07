@@ -2,7 +2,7 @@
   "name": "portfolio-showcase",
   "version": "2.0.0",
   "description": "Interactive portfolio showcase with modern web technologies",
-  "main": "js/main.js",
+  "main": "assets/js/main.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

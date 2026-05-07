@@ -965,6 +965,12 @@ body[dir="rtl"] .stat-item {
     --circuit-glow: rgba(168, 85, 247, 0.6);
 }
 
+/* React category - cyan/teal theme */
+.skill-category.react {
+    --circuit-color: #61dafb;
+    --circuit-glow: rgba(97, 218, 251, 0.6);
+}
+
 .skill-category-header {
     display: flex;
     align-items: center;
@@ -1042,6 +1048,110 @@ body[dir="rtl"] .stat-item {
     position: relative;
     z-index: 1;
     transition: color 0.5s ease;
+}
+
+/* Skill Progress Bar */
+.skill-progress-bar {
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 0.75rem;
+    position: relative;
+}
+
+.skill-progress-fill {
+    height: 100%;
+    width: var(--progress, 0%);
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    border-radius: 10px;
+    transition: width 1s ease-out;
+    position: relative;
+}
+
+.skill-progress-fill::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    animation: shimmer 2s infinite;
+}
+
+/* Skill Tree Container */
+.skill-tree-container h4 {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Skill Step */
+.skill-step {
+    position: relative;
+    margin-bottom: 1.25rem;
+}
+
+.skill-step:last-child {
+    margin-bottom: 0;
+}
+
+.step-connector {
+    position: absolute;
+    left: -20px;
+    top: 0;
+    height: 100%;
+    width: 20px;
+}
+
+.step-line {
+    position: absolute;
+    left: 10px;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, var(--primary), var(--secondary));
+    opacity: 0.3;
+}
+
+.skill-step:last-child .step-line {
+    display: none;
+}
+
+.step-node {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(99, 102, 241, 0.05);
+    border: 1px solid rgba(99, 102, 241, 0.1);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.step-node:hover {
+    background: rgba(99, 102, 241, 0.1);
+    border-color: rgba(99, 102, 241, 0.3);
+    transform: translateX(5px);
+}
+
+.step-content {
+    flex: 1;
+}
+
+.step-content h5 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 0.25rem;
+}
+
+.step-content p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin: 0;
 }
 
 .appointment-time {
