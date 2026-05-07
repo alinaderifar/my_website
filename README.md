@@ -60,8 +60,6 @@ portfolio-showcase/
 │   │   ├── translations.js     # Multi-language support
 │   │   ├── accessibility.js    # ARIA and screen reader support
 │   │   ├── event-handlers.js   # Centralized event delegation
-│   │   ├── device-showcase.js  # 3D device interactions
-│   │   ├── interactive-demos.js # Demo functionality
 │   │   ├── scroll-animations.js # Scroll-triggered animations
 │   │   ├── navigation.js       # Navigation and routing
 │   │   ├── forms.js            # Form validation and handling
@@ -75,17 +73,14 @@ portfolio-showcase/
 
 ## Features
 
-### Interactive Demos
-- **Flutter Code Editor**: Switch between code and preview
-- **Laravel API Playground**: Test API endpoints
-- **Product Configurator**: Dynamic pricing calculator
-- **Kanban Board**: Drag-and-drop task management
-- **Patient Dashboard**: Healthcare portal simulation
+### Animated Skill Trees
+- **Interactive Skill Trees**: Skills display as connected nodes that power on with electronic animations
+- **Sequential Power-Up**: Circuit-like effect when hovering - power flows through connecting lines
+- **Visual Feedback**: Each skill node lights up with a glowing effect on hover
 
-### Device Showcase
-- **3D Phone Mockup**: Interactive tilt effects
-- **Laptop Preview**: Desktop application showcase
-- **Smooth Transitions**: Device switching animations
+### Project Hover Previews
+- **Quick Preview**: Hover over project cards to see mini app previews
+- **Animated Transitions**: Smooth device mockup reveals on interaction
 
 ### Multi-Language Support
 - **English** (Default)

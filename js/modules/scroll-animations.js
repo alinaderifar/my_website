@@ -175,50 +175,6 @@ function setupEnhancedScrollReveal() {
       observer.observe(el);
     });
   });
-  
-  // Observe timeline items
-  const timelineItems = document.querySelectorAll('.timeline-item');
-  timelineItems.forEach((item, index) => {
-    item.style.opacity = '0';
-    item.style.transform = 'translateX(-20px)';
-    
-    const itemObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          setTimeout(() => {
-            entry.target.style.transition = 'all 0.6s ease-out';
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateX(0)';
-          }, index * 100);
-          itemObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
-    
-    itemObserver.observe(item);
-  });
-  
-  // Observe project cards
-  const projectCards = document.querySelectorAll('.project-card');
-  projectCards.forEach((card, index) => {
-    card.style.opacity = '0';
-    card.style.transform = 'translateY(30px)';
-    
-    const cardObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry, cardIndex) => {
-        if (entry.isIntersecting) {
-          setTimeout(() => {
-            entry.target.style.transition = 'all 0.6s ease-out';
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-          }, index * 100);
-          cardObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
-    
-    cardObserver.observe(card);
-  });
 }
 
 /**
@@ -234,10 +190,12 @@ function setupParallaxEffects() {
     if (!ticking) {
       requestAnimationFrame(() => {
         const scrolled = window.pageYOffset;
-        const parallaxElements = document.querySelectorAll('.hero-image, .phone-mockup');
+        // Note: Removed hero-image and phone-mockup from parallax
+        // as they already have CSS animations that conflict
+        const parallaxElements = document.querySelectorAll('.hero-badge, .hero-stats');
         
         parallaxElements.forEach(el => {
-          const speed = 0.5;
+          const speed = 0.3;
           const yPos = -(scrolled * speed);
           el.style.transform = `translateY(${yPos}px)`;
         });

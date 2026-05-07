@@ -41,24 +41,29 @@ export function init() {
     // Initialize core modules
     initAccessibility();
     initNavigation();
-    initDeviceShowcase();
-    initInteractiveDemos();
     initScrollAnimations();
     initForms();
+
+    // Initialize skill hover effects
+    initSkillPowerEffects();
 
     // Store cleanup functions
     appState.cleanupFunctions.push(cleanup);
 
-// Mark as initialized
+    // Mark as initialized
     appState.initialized = true;
 
     // Hide page loader
     const pageLoader = document.getElementById('pageLoader');
     if (pageLoader) {
       pageLoader.classList.add('hidden');
-      setTimeout(() => pageLoader.remove(), 500);
+      setTimeout(() => {
+        pageLoader.remove();
+        document.body.classList.remove('loading');
+      }, 500);
+    } else {
+      document.body.classList.remove('loading');
     }
-    document.body.classList.remove('loading');
 
     console.log('Application initialized successfully');
 
@@ -70,6 +75,29 @@ export function init() {
     // Show user-friendly error message
     showInitError();
   }
+}
+
+/**
+ * Initialize skill category power-on effects
+ * Adds 'powered' class on hover to trigger circuit animation
+ * The class stays after hover to maintain the powered state
+ */
+function initSkillPowerEffects() {
+  const skillCategories = document.querySelectorAll('.skill-category');
+  
+  skillCategories.forEach(category => {
+    // Add powered class on mouse enter
+    category.addEventListener('mouseenter', () => {
+      category.classList.add('powered');
+    });
+    
+    // Note: We intentionally do NOT remove 'powered' on mouseleave
+    // This keeps the animation in its final state after first hover
+    // If you want users to be able to "power off", uncomment below:
+    // category.addEventListener('mouseleave', () => {
+    //   category.classList.remove('powered');
+    // });
+  });
 }
 
 /**

@@ -3,6 +3,8 @@
  * Handles multi-language support with lazy loading
  */
 
+import { announce } from './accessibility.js';
+
 // Translation data - split by language for better performance
 const translations = {
   en: {
@@ -386,12 +388,17 @@ export function switchLanguage(lang) {
   });
   
   // Update page direction for RTL languages
-  const body = document.body;
-  if (lang === 'ar' || lang === 'fa') {
-    body.setAttribute('dir', 'rtl');
-  } else {
-    body.setAttribute('dir', 'ltr');
-  }
+  const isRTL = lang === 'ar' || lang === 'fa';
+  document.documentElement.lang = lang;
+  document.documentElement.dir = isRTL ? 'rtl' : 'ltr';
+  
+  // Announce language change for screen readers
+  const messages = {
+    en: 'Language changed to English',
+    fa: 'زبان به فارسی تغییر کرد',
+    ar: 'تم تغيير اللغة إلى العربية'
+  };
+  announce(messages[lang] || messages.en);
   
   // Dispatch language change event
   window.dispatchEvent(new CustomEvent('language:changed', { 
