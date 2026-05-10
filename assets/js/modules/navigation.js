@@ -100,7 +100,10 @@ function setupMobileMenu() {
   // Create mobile menu button if needed
   function createMobileButton() {
     if (mobileMenuBtn) return;
-    
+
+    const navRow = navLinks.parentElement;
+    if (!navRow || !navRow.contains(navLinks)) return;
+
     mobileMenuBtn = document.createElement('button');
     mobileMenuBtn.className = 'mobile-menu-btn';
     mobileMenuBtn.setAttribute('aria-label', 'Toggle mobile menu');
@@ -110,8 +113,7 @@ function setupMobileMenu() {
       <span></span>
       <span></span>
     `;
-    
-    navbar.insertBefore(mobileMenuBtn, navLinks);
+    navRow.insertBefore(mobileMenuBtn, navLinks);
     setupMobileButtonEvents();
   }
   
