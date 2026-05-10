@@ -47,6 +47,9 @@ export function init() {
     // Initialize skill hover effects
     initSkillPowerEffects();
 
+    initHeroPhoneTabs();
+    initProjectMobilePreview();
+
     // Store cleanup functions
     appState.cleanupFunctions.push(cleanup);
 
@@ -99,6 +102,76 @@ function initSkillPowerEffects() {
     // category.addEventListener('mouseleave', () => {
     //   category.classList.remove('powered');
     // });
+  });
+}
+
+/**
+ * Hero phone mockup: tab bar switches visible panels
+ */
+function initHeroPhoneTabs() {
+  const screen = document.querySelector('.flutter-app-screen');
+  if (!screen) return;
+
+  const nav = screen.querySelector('.app-nav');
+  const buttons = nav ? nav.querySelectorAll('.nav-item[data-app-tab]') : [];
+  const panels = screen.querySelectorAll('.app-tab-panel[data-app-tab]');
+  if (!buttons.length || !panels.length) return;
+
+  const activate = (tab) => {
+    buttons.forEach((btn) => {
+      const on = btn.dataset.appTab === tab;
+      btn.classList.toggle('active', on);
+      btn.setAttribute('aria-selected', on ? 'true' : 'false');
+    });
+    panels.forEach((panel) => {
+      const on = panel.dataset.appTab === tab;
+      panel.classList.toggle('is-active', on);
+    });
+  };
+
+  buttons.forEach((btn) => {
+    btn.addEventListener('click', () => activate(btn.dataset.appTab));
+  });
+}
+
+/**
+ * Mobile: project cards use a button to show image preview (no hover)
+ */
+function initProjectMobilePreview() {
+  const cards = document.querySelectorAll('.project-card');
+  if (!cards.length) return;
+
+  const closeAll = () => {
+    cards.forEach((card) => {
+      card.classList.remove('preview-open');
+      const toggle = card.querySelector('.project-preview-toggle');
+      if (toggle) toggle.setAttribute('aria-expanded', 'false');
+    });
+  };
+
+  cards.forEach((card) => {
+    const btn = card.querySelector('.project-preview-toggle');
+    if (!btn) return;
+
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const opening = !card.classList.contains('preview-open');
+      closeAll();
+      if (opening) {
+        card.classList.add('preview-open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.project-card')) {
+      closeAll();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeAll();
   });
 }
 

@@ -14,14 +14,14 @@ const translations = {
     nav_about: "About",
     nav_skills: "Skills",
     nav_experience: "Experience",
-    nav_projects: "Projects",
+nav_projects: "Projects",
     nav_contact: "Contact",
     
     // Hero Section
     hero_badge: "Available for Work",
-    hero_name: "John Developer",
-    hero_role: "Software Developer",
-    hero_description: "Passionate developer specializing in Flutter mobile applications and Laravel backend systems. Building scalable, user-friendly solutions for modern businesses.",
+    hero_name: "Ali Naderifar",
+     hero_role: "Software Developer",
+     hero_description: "Passionate software developer specializing in Flutter mobile applications and Laravel backend systems. Building scalable, user-friendly solutions for modern businesses.",
     hero_btn_primary: "View My Work",
     hero_btn_secondary: "Get In Touch",
     hero_stat_years: "Years Experience",
@@ -45,44 +45,72 @@ const translations = {
     skills_subtitle: "Interactive skill showcases and demonstrations",
     skills_flutter_title: "Flutter Development",
     skills_laravel_title: "Laravel Development",
-    skill_dart: "Dart",
-    skill_flutter: "Flutter Framework",
-    skill_state: "State Management",
-    skill_firebase: "Firebase Integration",
-    skill_uiux: "UI/UX Design",
-    skill_php: "PHP/Laravel",
-    skill_api: "RESTful APIs",
-    skill_database: "MySQL/PostgreSQL",
-    skill_redis: "Redis/Caching",
-    skill_testing: "Testing (PHPUnit)",
-    skill_level_expert: "Expert",
-    skill_level_advanced: "Advanced",
+    skills_react_title: "React.js Development",
+    skills_flutter_tree_title: "Flutter Skill Tree",
+    skills_laravel_tree_title: "Laravel Skill Tree",
+    skills_react_tree_title: "React Skill Tree",
+    skills_flutter_mastery_title: "Flutter Mastery",
+    skills_flutter_mastery_desc: "Cross-platform excellence",
+    skills_dart_expert_title: "Dart Expert",
+    skills_dart_expert_desc: "Modern language mastery",
+    skills_framework_deep_title: "Framework Deep Dive",
+    skills_framework_deep_desc: "Architecture & patterns",
+    skills_state_management_title: "State Management",
+    skills_state_management_desc: "Riverpod, Bloc & Provider",
+    skills_firebase_integration_title: "Firebase Integration",
+    skills_firebase_integration_desc: "Backend & real-time DB",
+    skills_ui_ux_design_title: "UI/UX Design",
+    skills_ui_ux_design_desc: "Pixel-perfect interfaces",
+    skills_laravel_expert_title: "Laravel Expert",
+    skills_laravel_expert_desc: "PHP framework mastery",
+    skills_restful_apis_title: "RESTful APIs",
+    skills_restful_apis_desc: "Clean architecture design",
+    skills_mysql_postgresql_title: "MySQL/PostgreSQL",
+    skills_mysql_postgresql_desc: "Database optimization",
+    skills_redis_caching_title: "Redis/Caching",
+    skills_redis_caching_desc: "Performance optimization",
+    skills_phpunit_testing_title: "PHPUnit Testing",
+    skills_phpunit_testing_desc: "TDD & quality assurance",
+    
+    // React Skills
+    skills_react_mastery_title: "React Mastery",
+    skills_react_mastery_desc: "Component-based architecture",
+    skills_react_hooks_title: "React Hooks",
+    skills_react_hooks_desc: "useState, useEffect, custom hooks",
+    skills_react_native_title: "React Native",
+    skills_react_native_desc: "Cross-platform mobile apps",
+    skills_react_state_title: "State Management",
+    skills_react_state_desc: "Redux, Zustand",
+skills_nextjs_title: "Next.js",
+    skills_nextjs_desc: "SSR, SSG, API routes",
+    skills_typescript_title: "TypeScript",
+    skills_typescript_desc: "Type-safe development",
     
     // Experience Section
     experience_title: "Work Experience",
     experience_subtitle: "My professional journey",
     exp_1_title: "Senior Software Developer",
-    exp_1_company: "Tech Solutions Inc.",
-    exp_1_date: "2022 - Present",
-    exp_1_desc_1: "Lead development of cross-platform mobile applications using Flutter",
-    exp_1_desc_2: "Designed and implemented RESTful APIs with Laravel for mobile backend",
-    exp_1_desc_3: "Mentored junior developers in best practices and code quality",
-    exp_1_desc_4: "Improved app performance by 40% through optimization techniques",
-    exp_2_title: "Full-Stack Developer",
-    exp_2_company: "Digital Innovations Ltd.",
-    exp_2_date: "2020 - 2022",
-    exp_2_desc_1: "Developed 15+ mobile applications using Flutter framework",
-    exp_2_desc_2: "Built scalable backend services with Laravel and MySQL",
-    exp_2_desc_3: "Integrated third-party APIs and payment gateways",
-    exp_2_desc_4: "Implemented CI/CD pipelines for automated testing and deployment",
-    exp_3_title: "Software Developer",
-    exp_3_company: "WebCraft Studios",
-    exp_3_date: "2019 - 2020",
-    exp_3_desc_1: "Developed web applications using Laravel framework",
-    exp_3_desc_2: "Collaborated with UI/UX designers to implement responsive interfaces",
-    exp_3_desc_3: "Wrote clean, maintainable code following SOLID principles",
-    exp_3_desc_4: "Participated in code reviews and technical discussions",
-    
+    exp_1_company: "Freelancer",
+     exp_1_date: "2025 - Present",
+     exp_1_desc_1: "Lead development of cross-platform mobile applications using Flutter",
+     exp_1_desc_2: "Designed and implemented RESTful APIs with Laravel for mobile backend",
+     exp_1_desc_3: "Mentored junior developers in best practices and code quality",
+     exp_1_desc_4: "Improved app performance by 40% through optimization techniques",
+     exp_2_title: "Full-Stack Developer",
+     exp_2_company: "Web Arka Pars",
+     exp_2_date: "2021 - 2025",
+     exp_2_desc_1: "Developed 15+ mobile applications using Flutter framework",
+     exp_2_desc_2: "Built scalable backend services with Laravel and MySQL",
+     exp_2_desc_3: "Integrated third-party APIs and payment gateways",
+     exp_2_desc_4: "Implemented CI/CD pipelines for automated testing and deployment",
+     exp_3_title: "Flutter Intern",
+     exp_3_company: "Prata Tech",
+     exp_3_date: "2020 - 2021",
+     exp_3_desc_1: "Developed web applications using Laravel framework",
+     exp_3_desc_2: "Collaborated with UI/UX designers to implement responsive interfaces",
+     exp_3_desc_3: "Wrote clean, maintainable code following SOLID principles",
+     exp_3_desc_4: "Participated in code reviews and technical discussions",
+
     // Projects Section
     projects_title: "Featured Projects",
     projects_subtitle: "Interactive demos and live experiences",
@@ -92,23 +120,32 @@ const translations = {
     project_2_desc: "Enterprise-grade project management platform with team collaboration, file sharing, and progress tracking.",
     project_3_title: "Healthcare Portal",
     project_3_desc: "Secure patient management system with appointment scheduling, medical records, and telemedicine features.",
-    
+    project_4_title: "AI Chat Application",
+    project_4_desc: "Intelligent chatbot with natural language processing and real-time responses.",
+    project_5_title: "Social Media Platform",
+    project_5_desc: "Feature-rich social networking platform with real-time messaging and content sharing.",
+    project_click_preview: "Click me",
+
     // Contact Section
     contact_title: "Get In Touch",
     contact_subtitle: "Let's work together on your next project",
     contact_email: "Email",
-    contact_email_value: "hello@johndev.com",
+    contact_email_value: "alinaderifar02468@gmail.com",
+    contact_github: "GitHub",
+    contact_github_link_text: "github.com/alinaderifar",
+    contact_linkedin: "LinkedIn",
+    contact_linkedin_link_text: "linkedin.com/in/ali-naderifar-014703224",
     contact_phone: "Phone",
-    contact_phone_value: "+1 (555) 123-4567",
+    contact_phone_value: "+98 912 345 6789",
     contact_location: "Location",
-    contact_location_value: "San Francisco, CA",
+    contact_location_value: "Tehran, Iran",
     contact_name_placeholder: "Your Name",
     contact_email_placeholder: "Your Email",
     contact_message_placeholder: "Your Message",
     contact_btn: "Send Message",
     
     // Footer
-    footer_text: "© 2024 John Developer. All rights reserved.",
+    footer_text: "© Made with Love by Me",
     
     // Form messages
     form_sending: "Sending...",
@@ -128,7 +165,7 @@ const translations = {
     
     // Hero Section
     hero_badge: "آماده کار",
-    hero_name: "جان توسعه‌دهنده",
+    hero_name: "علی نادری‌فر",
     hero_role: "توسعه‌دهنده نرم‌افزار",
     hero_description: "توسعه‌دهنده پرانرژی که به ایجاد راهکارهای دیجیتال نوین متعطش است. با تخصص در توسعه اپلیکیشن‌های موبایل با فلتر و سیستم‌های پشتیبان قدرتمند با لارفل، راهکارهای مقیاس‌پذیر و کاربرپسند برای کسب‌وکارهای مدرن ایجاد می‌کنم.",
     hero_btn_primary: "نمایش کارهای من",
@@ -154,18 +191,32 @@ const translations = {
     skills_subtitle: "فناوری‌هایی که در آن تخصص دارم",
     skills_flutter_title: "توسعه فلتر",
     skills_laravel_title: "توسعه لاراول",
-    skill_dart: "دارت",
-    skill_flutter: "فریم‌ورک فلتر",
-    skill_state: "مدیریت وضعیت",
-    skill_firebase: "یکپارچگی فایربیس",
-    skill_uiux: "طراحی رابط کاربری",
-    skill_php: "پی‌اچ‌پی/لارفل",
-    skill_api: "هوشمندسازی‌های استراحت",
-    skill_database: "میواس‌کیو‌ال/پستگره‌اس‌کیو‌ال",
-    skill_redis: "رددیس/کشینگ",
-    skill_testing: "تست (پی‌اچ‌پی‌یونیت)",
-    skill_level_expert: "متخصص",
-    skill_level_advanced: "پیشرفته",
+    skills_react_title: "توسعه ری‌اکت",
+    skills_flutter_tree_title: "درخت مهارت فلتر",
+    skills_laravel_tree_title: "درخت مهارت لاراول",
+    skills_react_tree_title: "درخت مهارت ری‌اکت",
+    skills_flutter_mastery_title: "تسلط فلتر",
+    skills_flutter_mastery_desc: "برتری چند پلتفرمی",
+    skills_dart_expert_title: "کارشناس دارت",
+    skills_dart_expert_desc: "تسلط زبان مدرن",
+    skills_framework_deep_title: "غوطه‌وری عمیق فریم‌ورک",
+    skills_framework_deep_desc: "معماری و الگوها",
+    skills_state_management_title: "مدیریت وضعیت",
+    skills_state_management_desc: "ریورپاد، بلاک و ارائه‌دهنده",
+    skills_firebase_integration_title: "یکپارچگی فایربیس",
+    skills_firebase_integration_desc: "پشتیبان و پایگاه داده لحظه‌ای",
+    skills_ui_ux_design_title: "طراحی رابط کاربری",
+    skills_ui_ux_design_desc: "رابط‌های پیکسل کامل",
+    skills_laravel_expert_title: "کارشناس لاراول",
+    skills_laravel_expert_desc: "تسلط فریم‌ورک پی‌اچ‌پی",
+    skills_restful_apis_title: "هوشمندسازی‌های استراحت",
+    skills_restful_apis_desc: "طراحی معماری پاک",
+    skills_mysql_postgresql_title: "میواس‌کیو‌ال/پستگره‌اس‌کیو‌ال",
+    skills_mysql_postgresql_desc: "بهینه‌سازی پایگاه داده",
+    skills_redis_caching_title: "رددیس/کشینگ",
+    skills_redis_caching_desc: "بهینه‌سازی عملکرد",
+    skills_phpunit_testing_title: "تست پی‌اچ‌پی‌یونیت",
+    skills_phpunit_testing_desc: "توسعه آزمون محور و تضمین کیفیت",
     
     // Experience Section
     experience_title: "سوابق کاری",
@@ -187,11 +238,19 @@ const translations = {
     exp_3_title: "توسعه‌دهنده نرم‌افزار",
     exp_3_company: "استودیوهای وبکرفت",
     exp_3_date: "۲۰۱۹ - ۲۰۲۰",
-    exp_3_desc_1: "توسعه برنامه‌های تحت وب با استفاده از فریم‌ورک لاراول",
+exp_3_desc_1: "توسعه برنامه‌های تحت وب با استفاده از فریم‌ورک لاراول",
     exp_3_desc_2: "همکاری با طراحان رابط کاربری برای پیاده‌سازی رابط‌های پاسخگو",
     exp_3_desc_3: "نوشتن کد تمیز و قابل نگهداری با رعایت اصول سلید",
     exp_3_desc_4: "شرکت در بررسی‌های کد و بحث‌های تکنیکی",
-    
+    exp_4_title: "توسعه‌دهنده میکروسرویس لاراول",
+    exp_4_company: "شرکت راهکارهای فناوری",
+    exp_4_date: "۲۰۲۲ - ۲۰۲۴",
+    exp_4_desc_1: "طراحی و پیاده‌سازی معماری میکروسرویس با لاراول و داکر",
+    exp_4_desc_2: "ساخت ارتباط رویداد-محور بین سرویس‌ها با استفاده از صف پیام (RabbitMQ/Redis)",
+    exp_4_desc_3: "پیاده‌سازی الگوی دروازه API با احراز هویت JWT و محدودسازی نرخ",
+    exp_4_desc_4: "بسته‌بندی سرویس‌ها با Docker و مدیریت با Kubernetes",
+    exp_4_desc_5: "دستیابی به 99.9% آپتایم با مقیاس‌پذیری افقی و تعادل بار",
+
     // Projects Section
     projects_title: "پروژه‌های برجسته",
     projects_subtitle: "برخی از کارهای اخیر من",
@@ -201,23 +260,32 @@ const translations = {
     project_2_desc: "پلتفرم مدیریت پروژه سطح کسب‌وکار با همکاری تیم، اشتراک فایل و ردیابی پیشرفت.",
     project_3_title: "پورتال مراقبت‌های بهداشتی",
     project_3_desc: "نظام مدیریت بیمار امن با جدول‌ریزی نوبت، پرونده‌های پزشکی و ویژگی‌های مراقبت از راه دور.",
-    
+    project_4_title: "اپلیکیشن چت هوشمند",
+    project_4_desc: "چت‌بات هوشمند با پردازش زبان طبیعی و پاسخ‌دهی به صورت لحظه‌ای.",
+    project_5_title: "پلتفرم شبکه اجتماعی",
+    project_5_desc: "پلتفرم شبکه اجتماعی پرکاربرد با پیام‌رسانی لحظه‌ای و اشتراک‌گذاری محتوا.",
+    project_click_preview: "پیش‌نمایش",
+
     // Contact Section
     contact_title: "تماس با من",
     contact_subtitle: "بیایید در پروژه بعدی شما همکاری کنیم",
     contact_email: "ایمیل",
-    contact_email_value: "hello@johndev.com",
+    contact_email_value: "alinaderifar02468@gmail.com",
+    contact_github: "گیت‌هاب",
+    contact_github_link_text: "github.com/alinaderifar",
+    contact_linkedin: "لینکدین",
+    contact_linkedin_link_text: "linkedin.com/in/ali-naderifar-014703224",
     contact_phone: "تلفن",
-    contact_phone_value: "+1 (555) 123-4567",
+    contact_phone_value: "+98 912 345 6789",
     contact_location: "مکان",
-    contact_location_value: "سنفرانسیسکو، کالیفرنیا",
+    contact_location_value: "تهران، ایران",
     contact_name_placeholder: "نام شما",
     contact_email_placeholder: "ایمیل شما",
     contact_message_placeholder: "پیام شما",
     contact_btn: "ارسال پیام",
     
     // Footer
-    footer_text: "© ۲۰۲۴ جان توسعه‌دهنده. تمام حقوق محفوظ است.",
+    footer_text: "© Made with Love by Me",
     
     // Form messages
     form_sending: "در حال ارسال...",
@@ -237,7 +305,7 @@ const translations = {
     
     // Hero Section
     hero_badge: "متاح للعمل",
-    hero_name: "جون المطور",
+    hero_name: "علي نادريفر",
     hero_role: "مطور برمجيات",
     hero_description: "مطور شغوف متخصص في تطبيقات فلتر المحمول وأنظمة لارفل الخلفية القوية. بناء حلول قابلة للتطوير وسهلة الاستخدام للشركات الحديثة.",
     hero_btn_primary: "عرض أعمالي",
@@ -263,18 +331,44 @@ const translations = {
     skills_subtitle: "التقنيات التي أتميز فيها",
     skills_flutter_title: "تطوير فلتر",
     skills_laravel_title: "تطوير لارفل",
-    skill_dart: "دارت",
-    skill_flutter: "إطار فلتر",
-    skill_state: "إدارة الحالة",
-    skill_firebase: "تكامل فايربيس",
-    skill_uiux: "تصميم واجهة المستخدم",
-    skill_php: "بي إتش بي/لارفل",
-    skill_api: "واجهات برمجة تطبيقات",
-    skill_database: "ميو إس كيو إل/بوستجر إس كيو إل",
-    skill_redis: "ريديس/التخزين المؤقت",
-    skill_testing: "اختبار (بي إتش بي يونيت)",
-    skill_level_expert: "خبير",
-    skill_level_advanced: "متقدم",
+    skills_flutter_tree_title: "شجرة مهارات فلتر",
+    skills_laravel_tree_title: "شجرة مهارات لارفل",
+    skills_flutter_mastery_title: "إتقان فلتر",
+    skills_flutter_mastery_desc: "التميز عبر المنصات",
+    skills_dart_expert_title: "خبير دارت",
+    skills_dart_expert_desc: "إتقان اللغة الحديثة",
+    skills_framework_deep_title: "الغوص العميق في الإطار",
+    skills_framework_deep_desc: "الهندسة المعمارية والأنماط",
+    skills_state_management_title: "إدارة الحالة",
+    skills_state_management_desc: "ريفربود، بلوك وموفّر",
+    skills_firebase_integration_title: "تكامل فايربيس",
+    skills_firebase_integration_desc: "الخلفية وقاعدة البيانات في الوقت الفعلي",
+    skills_ui_ux_design_title: "تصميم واجهة المستخدم",
+    skills_ui_ux_design_desc: "واجهات مثالية بالبكسل",
+    skills_laravel_expert_title: "خبير لارفل",
+    skills_laravel_expert_desc: "إتقان إطار بي إتش بي",
+    skills_restful_apis_title: "واجهات برمجة تطبيقات",
+    skills_restful_apis_desc: "تصميم الهندسة المعمارية النظيفة",
+    skills_mysql_postgresql_title: "ميو إس كيو إل/بوستجر إس كيو إل",
+    skills_mysql_postgresql_desc: "تحسين قاعدة البيانات",
+    skills_redis_caching_title: "ريديس/التخزين المؤقت",
+    skills_redis_caching_desc: "تحسين الأداء",
+    skills_phpunit_testing_title: "اختبار بي إتش بي يونيت",
+    skills_phpunit_testing_desc: "التطوير الموجه بالاختبار وضمان الجودة",
+    skills_react_title: "تطوير ري‌اكت",
+    skills_react_tree_title: "شجرة مهارات ري‌اكت",
+    skills_react_mastery_title: "إتقان ري‌اكت",
+    skills_react_mastery_desc: "الهندسة المعمارية القائمة على المكونات",
+    skills_react_hooks_title: "ري‌اكت هوكس",
+    skills_react_hooks_desc: "useState، useEffect، وهوكس مخصصة",
+    skills_react_native_title: "ري‌اكت نيتف",
+    skills_react_native_desc: "تطبيقات موبايل عبر المنصات",
+    skills_react_state_title: "إدارة الحالة",
+    skills_react_state_desc: "ريداكس، زوستاند",
+    skills_nextjs_title: "Next.js",
+    skills_nextjs_desc: "ري‌ستر، اس‌اس‌ج، واجهات برمجة تطبيقات",
+    skills_typescript_title: "تايب اسكريبت",
+    skills_typescript_desc: "تطوير مع نوع آمن",
     
     // Experience Section
     experience_title: "الخبرة العملية",
@@ -296,11 +390,19 @@ const translations = {
     exp_3_title: "مطور برمجيات",
     exp_3_company: "استوديوهات ويبكرافت",
     exp_3_date: "2019 - 2020",
-    exp_3_desc_1: "تطوير تطبيقات ويب باستخدام إطار لارفل",
+exp_3_desc_1: "تطوير تطبيقات ويب باستخدام إطار لارفل",
     exp_3_desc_2: "التعاون مع مصممي واجهة المستخدم لتنفيذ واجهات استجابة",
     exp_3_desc_3: "كتابة كود نظيف وقابل للصيانة مع اتباع مبادئ سوليد",
     exp_3_desc_4: "المشاركة في مراجعات الكود والمناقشات التقنية",
-    
+    exp_4_title: "مطور ميكروسرويسيس لارفل",
+    exp_4_company: "شركة حلول التقنية",
+    exp_4_date: "۲۰۲۲ - ۲۰۲۴",
+    exp_4_desc_1: "تصميم وتنفيذ بنية ميكروسرويسيس باستخدام لارفل ودوكر",
+    exp_4_desc_2: "بناء اتصال قائم على الأحداث بين الخدمات باستخدام صفوف الرسائل (RabbitMQ/Redis)",
+    exp_4_desc_3: "تنفيذ نمط بوابة API مع مصادقة JWT وتحديد معدل الطلبات",
+    exp_4_desc_4: "حاوية الخدمات باستخدام Docker وإدارةها مع Kubernetes",
+    exp_4_desc_5: "تحقيق 99.9% وقت تشغيل مع توسع أفقي وتوازن الحمل",
+
     // Projects Section
     projects_title: "المشاريع المميزة",
     projects_subtitle: "بعض أعمالي الحديثة",
@@ -310,23 +412,32 @@ const translations = {
     project_2_desc: "منصة إدارة مشاريع مستوى الشركات مع تعاون الفريق، مشاركة الملفات، وتتبع التقدم.",
     project_3_title: "بوابة الرعاية الصحية",
     project_3_desc: "نظام إدارة المرضى الآمن مع جدولة المواعيد، السجلات الطبية، وميزات الرعاية عن بُعد.",
-    
+    project_4_title: "تطبيق الدردشة الذكية",
+    project_4_desc: "روبوت دردشة ذكي بمعالجة اللغة الطبيعية واستجابات فورية.",
+    project_5_title: "منصة التواصل الاجتماعي",
+    project_5_desc: "منصة تواصل اجتماعي غنية بالمواصفات مع رسائل فورية ومشاركة المحتوى.",
+    project_click_preview: "معاينة",
+
     // Contact Section
     contact_title: "تواصل معي",
     contact_subtitle: "دعنا نعمل معاً في مشروعك القادم",
     contact_email: "البريد الإلكتروني",
-    contact_email_value: "hello@johndev.com",
+    contact_email_value: "alinaderifar02468@gmail.com",
+    contact_github: "GitHub",
+    contact_github_link_text: "github.com/alinaderifar",
+    contact_linkedin: "LinkedIn",
+    contact_linkedin_link_text: "linkedin.com/in/ali-naderifar-014703224",
     contact_phone: "الهاتف",
-    contact_phone_value: "+1 (555) 123-4567",
+    contact_phone_value: "+98 912 345 6789",
     contact_location: "الموقع",
-    contact_location_value: "سان فرانسيسكو، كاليفورنيا",
+    contact_location_value: "طهران، إيران",
     contact_name_placeholder: "اسمك",
     contact_email_placeholder: "بريدك الإلكتروني",
     contact_message_placeholder: "رسالتك",
     contact_btn: "إرسال الرسالة",
     
     // Footer
-    footer_text: "© ۲۰۲۴ جون المطور. جميع الحقوق محفوظة.",
+    footer_text: "© Made with Love by Me",
     
     // Form messages
     form_sending: "جاري الإرسال...",
@@ -533,44 +644,23 @@ function updateSkills(t) {
   const sectionSubtitle = skillsSection.querySelector('.section-subtitle');
   const skillCategories = skillsSection.querySelectorAll('.skill-category h3');
   
-  if (sectionTitle) sectionTitle.textContent = t.skills_title;
-  if (sectionSubtitle) sectionSubtitle.textContent = t.skills_subtitle;
-  
-  if (skillCategories.length >= 2) {
-    skillCategories[0].textContent = t.skills_flutter_title;
-    skillCategories[1].textContent = t.skills_laravel_title;
-  }
-  
-  // Update skill names and levels
-  const skillNames = document.querySelectorAll('.skill-name');
-  const skillLevels = document.querySelectorAll('.skill-level');
-  
-  if (skillNames.length >= 10 && skillLevels.length >= 10) {
-    // Flutter skills
-    skillNames[0].textContent = t.skill_dart;
-    skillLevels[0].textContent = t.skill_level_expert;
-    skillNames[1].textContent = t.skill_flutter;
-    skillLevels[1].textContent = t.skill_level_expert;
-    skillNames[2].textContent = t.skill_state;
-    skillLevels[2].textContent = t.skill_level_advanced;
-    skillNames[3].textContent = t.skill_firebase;
-    skillLevels[3].textContent = t.skill_level_advanced;
-    skillNames[4].textContent = t.skill_uiux;
-    skillLevels[4].textContent = t.skill_level_advanced;
-    
-    // Laravel skills
-    skillNames[5].textContent = t.skill_php;
-    skillLevels[5].textContent = t.skill_level_expert;
-    skillNames[6].textContent = t.skill_api;
-    skillLevels[6].textContent = t.skill_level_expert;
-    skillNames[7].textContent = t.skill_database;
-    skillLevels[7].textContent = t.skill_level_advanced;
-    skillNames[8].textContent = t.skill_redis;
-    skillLevels[8].textContent = t.skill_level_advanced;
-    skillNames[9].textContent = t.skill_testing;
-    skillLevels[9].textContent = t.skill_level_advanced;
-  }
-}
+if (sectionTitle) sectionTitle.textContent = t.skills_title;
+   if (sectionSubtitle) sectionSubtitle.textContent = t.skills_subtitle;
+   
+   if (skillCategories.length >= 3) {
+     skillCategories[0].textContent = t.skills_flutter_title;
+     skillCategories[1].textContent = t.skills_laravel_title;
+     skillCategories[2].textContent = t.skills_react_title;
+   }
+   
+   // Skill names and descriptions are updated via data-i18n attributes
+   const skillTreeTitles = skillsSection.querySelectorAll('.skill-tree-container h4');
+   if (skillTreeTitles.length >= 3) {
+     skillTreeTitles[0].textContent = t.skills_flutter_tree_title;
+     skillTreeTitles[1].textContent = t.skills_laravel_tree_title;
+     skillTreeTitles[2].textContent = t.skills_react_tree_title;
+   }
+ }
 
 /**
  * Update experience section
@@ -586,7 +676,7 @@ function updateExperience(t) {
   if (sectionTitle) sectionTitle.textContent = t.experience_title;
   if (sectionSubtitle) sectionSubtitle.textContent = t.experience_subtitle;
   
-  if (timelineItems.length >= 3) {
+  if (timelineItems.length >= 4) {
     // Experience 1
     timelineItems[0].querySelector('h3').textContent = t.exp_1_title;
     timelineItems[0].querySelector('.timeline-company').textContent = t.exp_1_company;
@@ -598,7 +688,7 @@ function updateExperience(t) {
       desc1[2].textContent = t.exp_1_desc_3;
       desc1[3].textContent = t.exp_1_desc_4;
     }
-    
+
     // Experience 2
     timelineItems[1].querySelector('h3').textContent = t.exp_2_title;
     timelineItems[1].querySelector('.timeline-company').textContent = t.exp_2_company;
@@ -610,7 +700,7 @@ function updateExperience(t) {
       desc2[2].textContent = t.exp_2_desc_3;
       desc2[3].textContent = t.exp_2_desc_4;
     }
-    
+
     // Experience 3
     timelineItems[2].querySelector('h3').textContent = t.exp_3_title;
     timelineItems[2].querySelector('.timeline-company').textContent = t.exp_3_company;
@@ -621,6 +711,19 @@ function updateExperience(t) {
       desc3[1].textContent = t.exp_3_desc_2;
       desc3[2].textContent = t.exp_3_desc_3;
       desc3[3].textContent = t.exp_3_desc_4;
+    }
+
+    // Experience 4
+    timelineItems[3].querySelector('h3').textContent = t.exp_4_title;
+    timelineItems[3].querySelector('.timeline-company').textContent = t.exp_4_company;
+    timelineItems[3].querySelector('.timeline-date').textContent = t.exp_4_date;
+    const desc4 = timelineItems[3].querySelectorAll('.timeline-description li');
+    if (desc4.length >= 5) {
+      desc4[0].textContent = t.exp_4_desc_1;
+      desc4[1].textContent = t.exp_4_desc_2;
+      desc4[2].textContent = t.exp_4_desc_3;
+      desc4[3].textContent = t.exp_4_desc_4;
+      desc4[4].textContent = t.exp_4_desc_5;
     }
   }
 }
@@ -639,13 +742,17 @@ function updateProjects(t) {
   if (sectionTitle) sectionTitle.textContent = t.projects_title;
   if (sectionSubtitle) sectionSubtitle.textContent = t.projects_subtitle;
   
-  if (projectCards.length >= 3) {
+  if (projectCards.length >= 5) {
     projectCards[0].querySelector('h3').textContent = t.project_1_title;
     projectCards[0].querySelector('p').textContent = t.project_1_desc;
     projectCards[1].querySelector('h3').textContent = t.project_2_title;
     projectCards[1].querySelector('p').textContent = t.project_2_desc;
     projectCards[2].querySelector('h3').textContent = t.project_3_title;
     projectCards[2].querySelector('p').textContent = t.project_3_desc;
+    projectCards[3].querySelector('h3').textContent = t.project_4_title;
+    projectCards[3].querySelector('p').textContent = t.project_4_desc;
+    projectCards[4].querySelector('h3').textContent = t.project_5_title;
+    projectCards[4].querySelector('p').textContent = t.project_5_desc;
   }
 }
 
@@ -658,20 +765,10 @@ function updateContact(t) {
   
   const sectionTitle = contactSection.querySelector('.section-title');
   const sectionSubtitle = contactSection.querySelector('.section-subtitle');
-  const contactItems = contactSection.querySelectorAll('.contact-item');
   const contactForm = contactSection.querySelector('.contact-form');
   
   if (sectionTitle) sectionTitle.textContent = t.contact_title;
   if (sectionSubtitle) sectionSubtitle.textContent = t.contact_subtitle;
-  
-  if (contactItems.length >= 3) {
-    contactItems[0].querySelector('h4').textContent = t.contact_email;
-    contactItems[0].querySelector('p').textContent = t.contact_email_value;
-    contactItems[1].querySelector('h4').textContent = t.contact_phone;
-    contactItems[1].querySelector('p').textContent = t.contact_phone_value;
-    contactItems[2].querySelector('h4').textContent = t.contact_location;
-    contactItems[2].querySelector('p').textContent = t.contact_location_value;
-  }
   
   if (contactForm) {
     const nameInput = contactForm.querySelector('#name');
