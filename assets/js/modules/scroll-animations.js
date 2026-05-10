@@ -12,12 +12,6 @@ export function initScrollAnimations() {
   setupScrollReveal();
   setupEnhancedScrollReveal();
   setupParallaxEffects();
-  
-  // Store cleanup functions
-  cleanupFunctions.push(() => {
-    // Remove scroll event listeners
-    window.removeEventListener('scroll', handleScroll);
-  });
 }
 
 /**
@@ -208,6 +202,10 @@ function setupParallaxEffects() {
   };
   
   window.addEventListener('scroll', handleScroll, { passive: true });
+
+  cleanupFunctions.push(() => {
+    window.removeEventListener('scroll', handleScroll);
+  });
 }
 
 /**

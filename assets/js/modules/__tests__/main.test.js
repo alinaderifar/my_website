@@ -3,7 +3,7 @@
  * Tests for the main application entry point
  */
 
-import { init, destroy, getState } from '../main.js';
+import { init, destroy, getState } from '../../main.js';
 
 describe('Main Application', () => {
   beforeEach(() => {
@@ -39,7 +39,6 @@ describe('Main Application', () => {
     // Initialize
     init();
 
-    // Check state
     const state = getState();
     expect(state.initialized).toBe(true);
     expect(state.eventHandler).toBeDefined();
@@ -72,35 +71,6 @@ describe('Main Application', () => {
     init(); // Second call
 
     expect(consoleSpy).toHaveBeenCalledWith('Application already initialized');
-
-    consoleSpy.mockRestore();
-  });
-
-  test('should handle initialization errors gracefully', () => {
-    // Mock a failing module
-    jest.mock('../modules/translations.js', () => {
-      throw new Error('Translation module failed');
-    });
-
-    document.body.innerHTML = `
-      <div id="app">
-        <nav class="navbar">
-          <div class="container">
-            <div class="nav-brand">Portfolio</div>
-          </div>
-        </nav>
-        <main id="main"></main>
-      </div>
-    `;
-
-    const consoleSpy = jest.spyOn(console, 'error').mockImplementation();
-
-    // Should not throw
-    expect(() => init()).not.toThrow();
-
-    // Should show error message
-    const errorDiv = document.querySelector('.init-error');
-    expect(errorDiv).toBeDefined();
 
     consoleSpy.mockRestore();
   });

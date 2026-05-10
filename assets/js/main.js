@@ -72,7 +72,9 @@ export function init() {
 
   } catch (error) {
     console.error('Failed to initialize application:', error);
-    // Show user-friendly error message
+    appState.eventHandler = null;
+    appState.cleanupFunctions = [];
+    appState.initialized = false;
     showInitError();
   }
 }
@@ -143,11 +145,21 @@ export function destroy() {
   console.log('Application destroyed');
 }
 
-// Auto-initialize when DOM is ready
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', init);
-} else {
-  init();
+/** @returns {typeof appState} */
+export function getState() {
+  return appState;
+}
+
+const shouldAutoInit =
+  typeof process === 'undefined' || process.env.NODE_ENV !== 'test';
+
+// Auto-initialize when DOM is ready (skipped under Jest)
+if (shouldAutoInit) {
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
 }
 
 // Handle page visibility changes
@@ -162,19 +174,22 @@ document.addEventListener('visibilitychange', () => {
 });
 
 // Export for debugging
-window.App = { init, destroy, getState: () => appState };
+window.App = { init, destroy, getState };
 
 // Initialize project hover images
-document.addEventListener('DOMContentLoaded', () => {
-  const projectCards = document.querySelectorAll('.project-card');
-  
-  projectCards.forEach(card => {
-    const imageName = card.getAttribute('data-image');
-    if (imageName) {
-      const previewImage = card.querySelector('.preview-image');
-      if (previewImage) {
-        previewImage.style.backgroundImage = `url('assets/images/${imageName}')`;
+if (shouldAutoInit) {
+  document.addEventListener('DOMContentLoaded', () => {
+    const projectCards = document.querySelectorAll('.project-card');
+
+    projectCards.forEach(card => {
+      const imageName = card.getAttribute('data-image');
+      if (imageName) {
+        const previewImage = card.querySelector('.preview-image');
+        if (previewImage) {
+          const url = new URL(`assets/images/${imageName}`, document.baseURI).href;
+          previewImage.style.backgroundImage = `url('${url}')`;
+        }
       }
-    }
+    });
   });
-});
+}

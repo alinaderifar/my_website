@@ -41,9 +41,12 @@
   ],
   "jest": {
     "testEnvironment": "jest-environment-jsdom",
-    "transform": {},
+    "setupFilesAfterEnv": ["<rootDir>/jest.setup.cjs"],
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    },
     "moduleNameMapper": {
-      "^@/(.*)$": "<rootDir>/js/$1"
+      "^@/(.*)$": "<rootDir>/assets/js/$1"
     }
   }
 }

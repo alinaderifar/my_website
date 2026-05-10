@@ -2,7 +2,13 @@ import { defineConfig } from 'vite';
 import { visualizer } from 'rollup-plugin-visualizer';
 
 export default defineConfig(({ mode }) => ({
-  base: '/',
+  // Relative asset URLs so dist/ works from subpaths (e.g. GitHub Pages) and local preview
+  base: './',
+  resolve: {
+    alias: {
+      '@': '/assets/js'
+    }
+  },
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
@@ -12,8 +18,7 @@ export default defineConfig(({ mode }) => ({
     rollupOptions: {
       output: {
         manualChunks: {
-          'translations': ['assets/js/modules/translations.js'],
-          'vendor': ['assets/js/modules/accessibility.js', 'assets/js/modules/event-handlers.js']
+          translations: ['assets/js/modules/translations.js']
         }
       }
     },
