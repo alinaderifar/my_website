@@ -27,18 +27,35 @@ nav_projects: "Projects",
     hero_stat_years: "Years Experience",
     hero_stat_projects: "Projects Completed",
     hero_stat_clients: "Happy Clients",
+    hero_phone_card_orders: "New Orders",
+    hero_phone_card_orders_delta: "+12% from yesterday",
+    hero_phone_card_revenue: "Revenue",
+    hero_phone_card_revenue_delta: "+8% this week",
+    hero_phone_order_status_shipped: "Shipped",
+    hero_phone_order_status_packing: "Packing",
+    hero_phone_order_status_new: "New",
+    hero_phone_search_placeholder: "Search orders…",
+    hero_phone_search_recent_cables: "Recent: cables",
+    hero_phone_search_recent_usbc: "Recent: USB-C",
+    hero_phone_profile_name: "You",
+    hero_phone_profile_role_label: "Role",
+    hero_phone_profile_role_value: "Admin",
+    hero_phone_profile_since_label: "Since",
+    hero_phone_profile_since_value: "2024",
+    hero_phone_nav_home: "Home",
+    hero_phone_nav_orders: "Orders",
+    hero_phone_nav_search: "Search",
+    hero_phone_nav_profile: "Profile",
     
     // About Section
     about_title: "About Me",
     about_subtitle: "Get to know more about my journey and expertise",
-    about_text_1: "I'm a dedicated software developer with a passion for creating innovative digital solutions. With expertise in both frontend mobile development and robust backend systems, I bridge the gap between user experience and server-side functionality.",
-    about_text_2: "My journey in software development has been driven by a commitment to continuous learning and delivering high-quality code that makes a real impact. I thrive on solving complex problems and turning ideas into reality.",
+    about_text_1: "I build mobile and web products with Flutter and Laravel, and I care as much about how the code is written as how the app feels in someone's hand.",
+    about_text_2: "Most of my work has been with small teams and real clients, where you learn quickly, fix things when they break, and ship features people actually use.",
     about_highlight_1_title: "Full-Stack Expertise",
     about_highlight_1_desc: "End-to-end development capabilities",
-    about_highlight_2_title: "Agile Methodology",
-    about_highlight_2_desc: "Scrum and iterative development",
-    about_highlight_3_title: "Team Collaboration",
-    about_highlight_3_desc: "Effective communication and leadership",
+    about_highlight_2_title: "Team Collaboration",
+    about_highlight_2_desc: "Clear communication and working well with designers, clients, and other developers",
     
     // Skills Section
     skills_title: "Skills & Technologies",
@@ -173,29 +190,46 @@ skills_nextjs_title: "Next.js",
     hero_stat_years: "سال سابقه",
     hero_stat_projects: "پروژه‌های تکمیل شده",
     hero_stat_clients: "مشتریان راضی",
+    hero_phone_card_orders: "سفارش‌های جدید",
+    hero_phone_card_orders_delta: "+۱۲٪ نسبت به دیروز",
+    hero_phone_card_revenue: "درآمد",
+    hero_phone_card_revenue_delta: "+۸٪ این هفته",
+    hero_phone_order_status_shipped: "ارسال‌شده",
+    hero_phone_order_status_packing: "در حال بسته‌بندی",
+    hero_phone_order_status_new: "جدید",
+    hero_phone_search_placeholder: "جستجوی سفارش‌ها…",
+    hero_phone_search_recent_cables: "اخیر: کابل‌ها",
+    hero_phone_search_recent_usbc: "اخیر: USB-C",
+    hero_phone_profile_name: "شما",
+    hero_phone_profile_role_label: "نقش",
+    hero_phone_profile_role_value: "مدیر",
+    hero_phone_profile_since_label: "از",
+    hero_phone_profile_since_value: "۲۰۲۴",
+    hero_phone_nav_home: "خانه",
+    hero_phone_nav_orders: "سفارش‌ها",
+    hero_phone_nav_search: "جستجو",
+    hero_phone_nav_profile: "پروفایل",
     
     // About Section
     about_title: "درباره من",
     about_subtitle: "بیشتر بدانید درباره مسیرم و تخصصم",
-    about_text_1: "من یک توسعه‌دهنده نرم‌افزار متعطله‌ام که به ایجاد راهکارهای دیجیتال نوین پرانرژی متعطشم. با تخصص در توسعه موبایل و سیستم‌های پشتیبان قدرتمند، من فاصله بین تجربه کاربر و عملکرد سمت سرور را پر می‌کنم.",
-    about_text_2: "مسیر من در توسعه نرم‌افزار توسط التزام به یادگیری مستمر و ارائه کد باکیفیت که تأثیر واقعی ایجاد می‌کند، هدایت شده است. من در حل مسائل پیچیده و تبدیل ایده‌ها به واقعیت می‌روزم.",
+    about_text_1: "با Flutter و Laravel اپلیکیشن موبایل و وب می‌سازم. برایم مهم است کد تمیز بنویسم و محصولی که تحویل می‌دهم در دست کاربر حس خوبی داشته باشد.",
+    about_text_2: "بیشتر کارهایم با تیم‌های کوچک و مشتری‌های واقعی بوده؛ جایی که سریع یاد می‌گیری، وقتی چیزی خراب می‌شود درستش می‌کنی و قابلیت‌هایی می‌سازی که مردم واقعاً استفاده می‌کنند.",
     about_highlight_1_title: "تخصص تمام‌پشتیب",
-    about_highlight_1_desc: "توانایی‌های توسعه من الی انتها",
-    about_highlight_2_title: "روش‌شناسی چابک",
-    about_highlight_2_desc: "اسکرام و توسعه تکراری",
-    about_highlight_3_title: "همکاری تیمی",
-    about_highlight_3_desc: "ارتباط موثر و رهبری",
+    about_highlight_1_desc: "توانایی توسعه از ابتدا تا انتها",
+    about_highlight_2_title: "همکاری تیمی",
+    about_highlight_2_desc: "ارتباط شفاف و کار کردن با طراحان، مشتریان و توسعه‌دهندگان دیگر",
     
     // Skills Section
     skills_title: "مهارت‌ها و فناوری‌ها",
     skills_subtitle: "فناوری‌هایی که در آن تخصص دارم",
-    skills_flutter_title: "توسعه فلتر",
-    skills_laravel_title: "توسعه لاراول",
-    skills_react_title: "توسعه ری‌اکت",
-    skills_flutter_tree_title: "درخت مهارت فلتر",
-    skills_laravel_tree_title: "درخت مهارت لاراول",
-    skills_react_tree_title: "درخت مهارت ری‌اکت",
-    skills_flutter_mastery_title: "تسلط فلتر",
+    skills_flutter_title: "Flutter Development",
+    skills_laravel_title: "Laravel Development",
+    skills_react_title: "React.js Development",
+    skills_flutter_tree_title: "Flutter Skill Tree",
+    skills_laravel_tree_title: "Laravel Skill Tree",
+    skills_react_tree_title: "React Skill Tree",
+    skills_flutter_mastery_title: "Flutter Mastery",
     skills_flutter_mastery_desc: "برتری چند پلتفرمی",
     skills_dart_expert_title: "کارشناس دارت",
     skills_dart_expert_desc: "تسلط زبان مدرن",
@@ -207,7 +241,7 @@ skills_nextjs_title: "Next.js",
     skills_firebase_integration_desc: "پشتیبان و پایگاه داده لحظه‌ای",
     skills_ui_ux_design_title: "طراحی رابط کاربری",
     skills_ui_ux_design_desc: "رابط‌های پیکسل کامل",
-    skills_laravel_expert_title: "کارشناس لاراول",
+    skills_laravel_expert_title: "Laravel Expert",
     skills_laravel_expert_desc: "تسلط فریم‌ورک پی‌اچ‌پی",
     skills_restful_apis_title: "هوشمندسازی‌های استراحت",
     skills_restful_apis_desc: "طراحی معماری پاک",
@@ -313,27 +347,44 @@ exp_3_desc_1: "توسعه برنامه‌های تحت وب با استفاده 
     hero_stat_years: "سنوات الخبرة",
     hero_stat_projects: "المشاريع المكتملة",
     hero_stat_clients: "العملاء السعداء",
+    hero_phone_card_orders: "طلبات جديدة",
+    hero_phone_card_orders_delta: "+١٢٪ عن أمس",
+    hero_phone_card_revenue: "الإيرادات",
+    hero_phone_card_revenue_delta: "+٨٪ هذا الأسبوع",
+    hero_phone_order_status_shipped: "تم الشحن",
+    hero_phone_order_status_packing: "قيد التعبئة",
+    hero_phone_order_status_new: "جديد",
+    hero_phone_search_placeholder: "ابحث في الطلبات…",
+    hero_phone_search_recent_cables: "الأخيرة: كابلات",
+    hero_phone_search_recent_usbc: "الأخيرة: USB-C",
+    hero_phone_profile_name: "أنت",
+    hero_phone_profile_role_label: "الدور",
+    hero_phone_profile_role_value: "مسؤول",
+    hero_phone_profile_since_label: "منذ",
+    hero_phone_profile_since_value: "٢٠٢٤",
+    hero_phone_nav_home: "الرئيسية",
+    hero_phone_nav_orders: "الطلبات",
+    hero_phone_nav_search: "بحث",
+    hero_phone_nav_profile: "الملف الشخصي",
     
     // About Section
     about_title: "حولي",
     about_subtitle: "تعرف أكثر على رحلتي وخبراتي",
-    about_text_1: "أنا مطور برمجيات ملتزم وشغوف بإنشاء حلول رقمية مبتكرة. بخبرة في تطوير الواجهات الأمامية للهواتف المحمولة والأنظمة الخلفية القوية، أربط الفجوة بين تجربة المستخدم ووظائف الخادم.",
-    about_text_2: "رحلتي في تطوير البرمجيات قادتها الالتزام بالتعلم المستمر وتقديم كود عالي الجودة الذي يحدث أثراً حقيقياً. أنأزدهر في حل المشكلات المعقدة وتحويل الأفكار إلى حقيقة.",
+    about_text_1: "أبني تطبيقات للجوال والويب باستخدام Flutter وLaravel، وأهتم بأن يكون الكود نظيفاً قدر اهتمامي بأن يشعر المستخدم بالتطبيق في يده.",
+    about_text_2: "معظم عملي كان مع فرق صغيرة وعملاء حقيقيين؛ تتعلّم بسرعة، تصلّح ما يتعطل، وتطلق ميزات يستخدمها الناس فعلاً.",
     about_highlight_1_title: "خبرة شاملة",
     about_highlight_1_desc: "قدرات تطوير من البداية للنهاية",
-    about_highlight_2_title: "المنهجية المرنة",
-    about_highlight_2_desc: "سكرام والتطوير التكراري",
-    about_highlight_3_title: "التعاون الجماعي",
-    about_highlight_3_desc: "تواصل فعال وقيادة",
+    about_highlight_2_title: "التعاون الجماعي",
+    about_highlight_2_desc: "تواصل واضح والعمل مع المصممين والعملاء والمطورين الآخرين",
     
     // Skills Section
     skills_title: "المهارات والتقنيات",
     skills_subtitle: "التقنيات التي أتميز فيها",
-    skills_flutter_title: "تطوير فلتر",
-    skills_laravel_title: "تطوير لارفل",
-    skills_flutter_tree_title: "شجرة مهارات فلتر",
-    skills_laravel_tree_title: "شجرة مهارات لارفل",
-    skills_flutter_mastery_title: "إتقان فلتر",
+    skills_flutter_title: "Flutter Development",
+    skills_laravel_title: "Laravel Development",
+    skills_flutter_tree_title: "Flutter Skill Tree",
+    skills_laravel_tree_title: "Laravel Skill Tree",
+    skills_flutter_mastery_title: "Flutter Mastery",
     skills_flutter_mastery_desc: "التميز عبر المنصات",
     skills_dart_expert_title: "خبير دارت",
     skills_dart_expert_desc: "إتقان اللغة الحديثة",
@@ -345,7 +396,7 @@ exp_3_desc_1: "توسعه برنامه‌های تحت وب با استفاده 
     skills_firebase_integration_desc: "الخلفية وقاعدة البيانات في الوقت الفعلي",
     skills_ui_ux_design_title: "تصميم واجهة المستخدم",
     skills_ui_ux_design_desc: "واجهات مثالية بالبكسل",
-    skills_laravel_expert_title: "خبير لارفل",
+    skills_laravel_expert_title: "Laravel Expert",
     skills_laravel_expert_desc: "إتقان إطار بي إتش بي",
     skills_restful_apis_title: "واجهات برمجة تطبيقات",
     skills_restful_apis_desc: "تصميم الهندسة المعمارية النظيفة",
@@ -355,9 +406,9 @@ exp_3_desc_1: "توسعه برنامه‌های تحت وب با استفاده 
     skills_redis_caching_desc: "تحسين الأداء",
     skills_phpunit_testing_title: "اختبار بي إتش بي يونيت",
     skills_phpunit_testing_desc: "التطوير الموجه بالاختبار وضمان الجودة",
-    skills_react_title: "تطوير ري‌اكت",
-    skills_react_tree_title: "شجرة مهارات ري‌اكت",
-    skills_react_mastery_title: "إتقان ري‌اكت",
+    skills_react_title: "React.js Development",
+    skills_react_tree_title: "React Skill Tree",
+    skills_react_mastery_title: "React Mastery",
     skills_react_mastery_desc: "الهندسة المعمارية القائمة على المكونات",
     skills_react_hooks_title: "ري‌اكت هوكس",
     skills_react_hooks_desc: "useState، useEffect، وهوكس مخصصة",
@@ -459,11 +510,9 @@ export function initTranslations() {
     currentLang = savedLang;
   }
   
-  // Apply initial language
-  applyLanguage(currentLang);
-  
-  // Set up language switcher buttons
+  // Apply initial language and document direction
   setupLanguageSwitcher();
+  switchLanguage(currentLang);
 }
 
 /**
@@ -498,11 +547,6 @@ export function switchLanguage(lang) {
     }
   });
   
-  // Update page direction for RTL languages
-  const isRTL = lang === 'ar' || lang === 'fa';
-  document.documentElement.lang = lang;
-  document.documentElement.dir = isRTL ? 'rtl' : 'ltr';
-  
   // Announce language change for screen readers
   const messages = {
     en: 'Language changed to English',
@@ -523,6 +567,11 @@ export function switchLanguage(lang) {
 function applyLanguage(lang) {
   const t = translations[lang];
   if (!t) return;
+
+  const isRTL = lang === 'ar' || lang === 'fa';
+  document.documentElement.lang = lang;
+  document.documentElement.dir = isRTL ? 'rtl' : 'ltr';
+  document.body.dir = isRTL ? 'rtl' : 'ltr';
   
   // Update all elements with data-i18n attribute
   document.querySelectorAll('[data-i18n]').forEach(el => {
@@ -623,13 +672,11 @@ function updateAbout(t) {
     aboutParagraphs[1].textContent = t.about_text_2;
   }
   
-  if (highlightItems.length >= 3) {
+  if (highlightItems.length >= 2) {
     highlightItems[0].querySelector('h4').textContent = t.about_highlight_1_title;
     highlightItems[0].querySelector('p').textContent = t.about_highlight_1_desc;
     highlightItems[1].querySelector('h4').textContent = t.about_highlight_2_title;
     highlightItems[1].querySelector('p').textContent = t.about_highlight_2_desc;
-    highlightItems[2].querySelector('h4').textContent = t.about_highlight_3_title;
-    highlightItems[2].querySelector('p').textContent = t.about_highlight_3_desc;
   }
 }
 
@@ -676,10 +723,9 @@ function updateExperience(t) {
   if (sectionTitle) sectionTitle.textContent = t.experience_title;
   if (sectionSubtitle) sectionSubtitle.textContent = t.experience_subtitle;
   
-  if (timelineItems.length >= 4) {
+  if (timelineItems.length >= 3) {
     // Experience 1
     timelineItems[0].querySelector('h3').textContent = t.exp_1_title;
-    timelineItems[0].querySelector('.timeline-company').textContent = t.exp_1_company;
     timelineItems[0].querySelector('.timeline-date').textContent = t.exp_1_date;
     const desc1 = timelineItems[0].querySelectorAll('.timeline-description li');
     if (desc1.length >= 4) {
@@ -691,7 +737,6 @@ function updateExperience(t) {
 
     // Experience 2
     timelineItems[1].querySelector('h3').textContent = t.exp_2_title;
-    timelineItems[1].querySelector('.timeline-company').textContent = t.exp_2_company;
     timelineItems[1].querySelector('.timeline-date').textContent = t.exp_2_date;
     const desc2 = timelineItems[1].querySelectorAll('.timeline-description li');
     if (desc2.length >= 4) {
@@ -703,7 +748,6 @@ function updateExperience(t) {
 
     // Experience 3
     timelineItems[2].querySelector('h3').textContent = t.exp_3_title;
-    timelineItems[2].querySelector('.timeline-company').textContent = t.exp_3_company;
     timelineItems[2].querySelector('.timeline-date').textContent = t.exp_3_date;
     const desc3 = timelineItems[2].querySelectorAll('.timeline-description li');
     if (desc3.length >= 4) {
@@ -711,19 +755,6 @@ function updateExperience(t) {
       desc3[1].textContent = t.exp_3_desc_2;
       desc3[2].textContent = t.exp_3_desc_3;
       desc3[3].textContent = t.exp_3_desc_4;
-    }
-
-    // Experience 4
-    timelineItems[3].querySelector('h3').textContent = t.exp_4_title;
-    timelineItems[3].querySelector('.timeline-company').textContent = t.exp_4_company;
-    timelineItems[3].querySelector('.timeline-date').textContent = t.exp_4_date;
-    const desc4 = timelineItems[3].querySelectorAll('.timeline-description li');
-    if (desc4.length >= 5) {
-      desc4[0].textContent = t.exp_4_desc_1;
-      desc4[1].textContent = t.exp_4_desc_2;
-      desc4[2].textContent = t.exp_4_desc_3;
-      desc4[3].textContent = t.exp_4_desc_4;
-      desc4[4].textContent = t.exp_4_desc_5;
     }
   }
 }

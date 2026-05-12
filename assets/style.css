@@ -152,15 +152,19 @@ body[dir="rtl"] .project-card:hover .project-hover-preview {
   }
 }
 
-/* Skill tree RTL support */
+/* Skill tree RTL — connectors on the reading side (right) */
 body[dir="rtl"] .skill-step .step-connector {
-  right: auto;
-  left: 20px;
+  left: auto;
+  right: -20px;
 }
 
-body[dir="rtl"] .step-node::before {
-  right: auto;
-  left: -25px;
+body[dir="rtl"] .skill-step .step-line {
+  left: auto;
+  right: 10px;
+}
+
+body[dir="rtl"] .step-node:hover {
+  transform: translateX(-5px);
 }
 
 /* Contact form RTL support */
@@ -214,10 +218,6 @@ body[dir="rtl"] .timeline-description li {
 body[dir="rtl"] .timeline-description li::before {
   left: auto;
   right: 0;
-}
-
-body[dir="rtl"] .step-node:hover {
-  transform: translateX(-5px);
 }
 
 @keyframes timelineItemRevealRTL {
@@ -3394,8 +3394,17 @@ html.js-scroll-reveal .scroll-reveal.is-visible {
     padding: 1rem 0 1rem 0.5rem;
   }
 
+  body[dir="rtl"] .animated-skill-tree {
+    padding: 1rem 0.5rem 1rem 0;
+  }
+
   .step-connector {
     left: -0.5rem;
+  }
+
+  body[dir="rtl"] .skill-step .step-connector {
+    left: auto;
+    right: -0.5rem;
   }
 
   .step-node {
