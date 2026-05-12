@@ -41,7 +41,6 @@ export function init() {
     // Initialize core modules
     initAccessibility();
     initNavigation();
-    initScrollAnimations();
     initForms();
 
     // Initialize skill hover effects
@@ -56,16 +55,24 @@ export function init() {
     // Mark as initialized
     appState.initialized = true;
 
-    // Hide page loader
+    // Hide page loader, then wire scroll reveals once layout is stable
     const pageLoader = document.getElementById('pageLoader');
+    const startScrollAnimations = () => {
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => initScrollAnimations());
+      });
+    };
+
     if (pageLoader) {
       pageLoader.classList.add('hidden');
       setTimeout(() => {
         pageLoader.remove();
         document.body.classList.remove('loading');
+        startScrollAnimations();
       }, 500);
     } else {
       document.body.classList.remove('loading');
+      startScrollAnimations();
     }
 
     console.log('Application initialized successfully');

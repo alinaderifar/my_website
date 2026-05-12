@@ -560,10 +560,6 @@ body[dir="rtl"] .step-node:hover {
   }
 }
 
-.hero-content {
-  animation: fadeInUp 0.8s ease-out;
-}
-
 .hero-badge {
   display: inline-block;
   margin-bottom: 1.5rem;
@@ -1326,7 +1322,7 @@ body[dir="rtl"] .stat-item {
   color: var(--text);
 }
 
-/* Scroll-linked polish: #skills / #experience get .in-view from IntersectionObserver */
+/* Skills + experience polish (triggered when section enters view) */
 #skills.in-view .skill-category {
   animation: skillCategoryReveal 0.75s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
@@ -1726,9 +1722,6 @@ body[dir="rtl"] #skills.in-view .animated-skill-tree .skill-step {
   border: 1px solid rgba(99, 102, 241, 0.1);
   border-radius: var(--radius);
   transition: var(--transition-smooth);
-  opacity: 0;
-  transform: translateX(-30px);
-  animation: timelineItemReveal 0.6s ease-out forwards;
 }
 
 .timeline-marker {
@@ -1745,17 +1738,11 @@ body[dir="rtl"] #skills.in-view .animated-skill-tree .skill-step {
   box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.3);
 }
 
-.timeline-item:nth-child(1) {
-  animation-delay: 0.2s;
-}
-.timeline-item:nth-child(2) {
-  animation-delay: 0.4s;
-}
-.timeline-item:nth-child(3) {
-  animation-delay: 0.6s;
-}
-
 @keyframes timelineItemReveal {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
   to {
     opacity: 1;
     transform: translateX(0);
@@ -1780,6 +1767,27 @@ body[dir="rtl"] #skills.in-view .animated-skill-tree .skill-step {
   50% {
     filter: brightness(1.2) drop-shadow(0 0 12px rgba(168, 85, 247, 0.45));
   }
+}
+
+#experience .timeline-item {
+  opacity: 0;
+  transform: translateX(-30px);
+}
+
+#experience.in-view .timeline-item {
+  animation: timelineItemReveal 0.75s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+#experience.in-view .timeline-item:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+#experience.in-view .timeline-item:nth-child(2) {
+  animation-delay: 0.25s;
+}
+
+#experience.in-view .timeline-item:nth-child(3) {
+  animation-delay: 0.4s;
 }
 
 #experience.in-view .timeline-item {
@@ -3173,6 +3181,31 @@ body[dir="rtl"] .contact-item-body {
   margin-top: 0.3rem;
 }
 
+/* Scroll reveal — JS adds .is-visible when sections enter the viewport */
+html.js-scroll-reveal .scroll-reveal {
+  transition:
+    opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+html.js-scroll-reveal .scroll-reveal:not(.is-visible) {
+  opacity: 0;
+  transform: translateY(28px);
+}
+
+html.js-scroll-reveal .hero-content.scroll-reveal:not(.is-visible) {
+  transform: translateX(-28px);
+}
+
+html.js-scroll-reveal .hero-image.scroll-reveal:not(.is-visible) {
+  transform: translateX(28px);
+}
+
+html.js-scroll-reveal .scroll-reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
 /* Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
   * {
@@ -3223,15 +3256,21 @@ body[dir="rtl"] .contact-item-body {
     transition: none !important;
   }
 
+  html.js-scroll-reveal .scroll-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+
   #skills .skill-category,
-  #skills.in-view .skill-category,
+  #skills .skill-category,
   #skills .animated-skill-tree .skill-step,
-  #skills.in-view .skill-category-icon,
-  #skills.in-view .section-header,
-  #experience.in-view .section-header,
-  #experience.in-view .timeline::before,
-  #experience.in-view .timeline-item,
-  #experience.in-view .timeline-marker {
+  #skills .skill-category-icon,
+  #skills .section-header,
+  #experience .section-header,
+  #experience .timeline::before,
+  #experience .timeline-item,
+  #experience .timeline-marker {
     animation: none !important;
     opacity: 1 !important;
     transform: none !important;
