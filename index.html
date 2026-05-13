@@ -75,6 +75,7 @@
         .page-loader.hidden {
             opacity: 0;
             visibility: hidden;
+            pointer-events: none;
         }
 
         .loader-spinner {
@@ -96,14 +97,11 @@
             to { transform: rotate(360deg); }
         }
 
-        /* Reduced motion */
+        /* Reduced motion: avoid global * !important (breaks scroll-reveal & keyframes); details in assets/style.css */
         @media (prefers-reduced-motion: reduce) {
-            * {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
+            .loader-spinner {
+                animation: none;
             }
-            
             html {
                 scroll-behavior: auto;
             }
@@ -788,7 +786,9 @@
                           </div>
                           <button type="button" class="btn btn-secondary project-preview-toggle" aria-expanded="false" aria-controls="project-preview-lotfi-piano" data-i18n="project_click_preview">Click me</button>
                           <div class="project-hover-preview" id="project-preview-lotfi-piano" role="region" aria-label="Project preview">
-                              <div class="preview-image"></div>
+                              <div class="preview-image preview-image--placeholder">
+                                  <span class="preview-placeholder-label" data-i18n="project_preview_coming_soon">Coming soon</span>
+                              </div>
                           </div>
                     </div>
 
@@ -949,7 +949,9 @@
                            </div>
                            <button type="button" class="btn btn-secondary project-preview-toggle" aria-expanded="false" aria-controls="project-preview-lusso-home" data-i18n="project_click_preview">Click me</button>
                            <div class="project-hover-preview" id="project-preview-lusso-home" role="region" aria-label="Project preview">
-                               <div class="preview-image"></div>
+                               <div class="preview-image preview-image--placeholder">
+                                   <span class="preview-placeholder-label" data-i18n="project_preview_coming_soon">Coming soon</span>
+                               </div>
                            </div>
                     </div>
 

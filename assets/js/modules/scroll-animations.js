@@ -4,6 +4,7 @@
 
 let observer = null;
 let onScroll = null;
+let onLoadReveal = null;
 
 const SECTION_SELECTORS =
   '.hero-content, .hero-image, #about, #skills, #experience, #projects, #contact';
@@ -60,7 +61,7 @@ export function initScrollAnimations() {
         observer.unobserve(entry.target);
       });
     },
-    { threshold: 0.05, rootMargin: '0px 0px 10% 0px' }
+    { threshold: 0.01, rootMargin: '0px 0px 15% 0px' }
   );
 
   targets.forEach((el) => observer.observe(el));
@@ -83,8 +84,12 @@ export function initScrollAnimations() {
     window.visualViewport.addEventListener('resize', onScroll, { passive: true });
   }
 
-  requestAnimationFrame(() => scanRevealTargets(targets));
-  window.addEventListener('load', onScroll, { once: true });
+  const runRevealScan = () => scanRevealTargets(targets);
+  requestAnimationFrame(() => {
+    requestAnimationFrame(runRevealScan);
+  });
+  onLoadReveal = runRevealScan;
+  window.addEventListener('load', onLoadReveal, { once: true });
 }
 
 export function cleanupScrollAnimations() {
@@ -101,5 +106,9 @@ export function cleanupScrollAnimations() {
       window.visualViewport.removeEventListener('resize', onScroll);
     }
     onScroll = null;
+  }
+  if (onLoadReveal) {
+    window.removeEventListener('load', onLoadReveal);
+    onLoadReveal = null;
   }
 }

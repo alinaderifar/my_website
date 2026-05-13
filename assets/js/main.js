@@ -65,10 +65,10 @@ export function init() {
 
     if (pageLoader) {
       pageLoader.classList.add('hidden');
+      startScrollAnimations();
       setTimeout(() => {
         pageLoader.remove();
         document.body.classList.remove('loading');
-        startScrollAnimations();
       }, 500);
     } else {
       document.body.classList.remove('loading');
@@ -256,23 +256,29 @@ document.addEventListener('visibilitychange', () => {
 // Export for debugging
 window.App = { init, destroy, getState };
 
-// Initialize project hover images
-if (shouldAutoInit) {
-  document.addEventListener('DOMContentLoaded', () => {
-    const projectCards = document.querySelectorAll('.project-card');
-
-    projectCards.forEach(card => {
-      const imageName = card.getAttribute('data-image');
-      const previewImage = card.querySelector('.preview-image');
-      if (!previewImage) return;
-      previewImage.classList.remove('preview-image--placeholder');
-      if (imageName && imageName !== 'placeholder') {
-        const url = new URL(`assets/images/${imageName}`, document.baseURI).href;
-        previewImage.style.backgroundImage = `url('${url}')`;
-      } else {
-        previewImage.style.backgroundImage = 'none';
-        previewImage.classList.add('preview-image--placeholder');
-      }
-    });
+function initProjectPreviewImages() {
+  const projectCards = document.querySelectorAll('.project-card');
+  projectCards.forEach((card) => {
+    const imageName = card.getAttribute('data-image');
+    const previewImage = card.querySelector('.preview-image');
+    if (!previewImage) return;
+    previewImage.classList.remove('preview-image--placeholder');
+    if (imageName && imageName !== 'placeholder') {
+      const url = new URL(`assets/images/${imageName}`, document.baseURI).href;
+      previewImage.style.backgroundImage = `url('${url}')`;
+      previewImage.querySelectorAll('.preview-placeholder-label').forEach((el) => el.remove());
+    } else {
+      previewImage.style.backgroundImage = 'none';
+      previewImage.classList.add('preview-image--placeholder');
+    }
   });
+}
+
+// Initialize project hover images (module may run after DOMContentLoaded when deferred)
+if (shouldAutoInit) {
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initProjectPreviewImages);
+  } else {
+    initProjectPreviewImages();
+  }
 }

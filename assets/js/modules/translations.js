@@ -150,6 +150,7 @@ skills_nextjs_title: "Next.js",
     project_9_title: "Lusso Home Website",
     project_9_desc: "Showcase and e-commerce site for Lusso Home products.",
     project_click_preview: "Click me",
+    project_preview_coming_soon: "Coming soon",
 
     // Contact Section
     contact_title: "Get In Touch",
@@ -315,6 +316,7 @@ exp_3_desc_1: "توسعه برنامه‌های تحت وب با استفاده 
     project_9_title: "وب‌سایت لوسو هوم",
     project_9_desc: "نمایش و فروش محصولات لوسو هوم.",
     project_click_preview: "پیش‌نمایش",
+    project_preview_coming_soon: "به‌زودی",
 
     // Contact Section
     contact_title: "تماس با من",
@@ -492,6 +494,7 @@ exp_3_desc_1: "تطوير تطبيقات ويب باستخدام إطار لار
     project_9_title: "موقع لوسو هوم",
     project_9_desc: "عرض وبيع منتجات لوسو هوم.",
     project_click_preview: "معاينة",
+    project_preview_coming_soon: "قريبًا",
 
     // Contact Section
     contact_title: "تواصل معي",
