@@ -263,12 +263,15 @@ if (shouldAutoInit) {
 
     projectCards.forEach(card => {
       const imageName = card.getAttribute('data-image');
-      if (imageName) {
-        const previewImage = card.querySelector('.preview-image');
-        if (previewImage) {
-          const url = new URL(`assets/images/${imageName}`, document.baseURI).href;
-          previewImage.style.backgroundImage = `url('${url}')`;
-        }
+      const previewImage = card.querySelector('.preview-image');
+      if (!previewImage) return;
+      previewImage.classList.remove('preview-image--placeholder');
+      if (imageName && imageName !== 'placeholder') {
+        const url = new URL(`assets/images/${imageName}`, document.baseURI).href;
+        previewImage.style.backgroundImage = `url('${url}')`;
+      } else {
+        previewImage.style.backgroundImage = 'none';
+        previewImage.classList.add('preview-image--placeholder');
       }
     });
   });

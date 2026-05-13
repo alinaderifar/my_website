@@ -131,16 +131,24 @@ skills_nextjs_title: "Next.js",
     // Projects Section
     projects_title: "Featured Projects",
     projects_subtitle: "Interactive demos and live experiences",
-    project_1_title: "E-Commerce Mobile App",
-    project_1_desc: "A full-featured shopping application with real-time inventory, secure payments, and personalized recommendations.",
-    project_2_title: "Task Management System",
-    project_2_desc: "Enterprise-grade project management platform with team collaboration, file sharing, and progress tracking.",
-    project_3_title: "Healthcare Portal",
-    project_3_desc: "Secure patient management system with appointment scheduling, medical records, and telemedicine features.",
-    project_4_title: "AI Chat Application",
-    project_4_desc: "Intelligent chatbot with natural language processing and real-time responses.",
-    project_5_title: "Social Media Platform",
-    project_5_desc: "Feature-rich social networking platform with real-time messaging and content sharing.",
+    project_1_title: "Lotfi Piano Website",
+    project_1_desc: "Company site to showcase pianos and sales, plus customer support and service requests.",
+    project_2_title: "Gomgashteh Platform",
+    project_2_desc: "Non-profit platform to post and find lost and found items and connect with other users.",
+    project_3_title: "Pelak Haft Customer Management",
+    project_3_desc: "Customer and event management system for Pelak Haft wedding services.",
+    project_4_title: "Khabam Miad App",
+    project_4_desc: "Mobile app for sleep quality, tracking, and meditation.",
+    project_5_title: "Mask App",
+    project_5_desc: "Mobile app for mask detection and face recognition using on-device AI.",
+    project_6_title: "Farisam App",
+    project_6_desc: "Mobile app for the Farisam company to browse and purchase their products.",
+    project_7_title: "AI Object Detection App",
+    project_7_desc: "Real-time object detection and pose estimation on mobile, with selectable models (SSD MobileNet, Tiny YOLOv2, PoseNet).",
+    project_8_title: "Shadi Avaran Website",
+    project_8_desc: "Company site to run raffles for customers and distribute discount codes.",
+    project_9_title: "Lusso Home Website",
+    project_9_desc: "Showcase and e-commerce site for Lusso Home products.",
     project_click_preview: "Click me",
 
     // Contact Section
@@ -288,16 +296,24 @@ exp_3_desc_1: "توسعه برنامه‌های تحت وب با استفاده 
     // Projects Section
     projects_title: "پروژه‌های برجسته",
     projects_subtitle: "برخی از کارهای اخیر من",
-    project_1_title: "اپلیکیشن تجارت الکترونیک",
-    project_1_desc: "اپلیکیشن خرید کامل با موجودی لحظه‌ای، پرداخت‌های ایمن و پیشنهادات شخصی‌سازی‌شده.",
-    project_2_title: "نظام مدیریت وظایف",
-    project_2_desc: "پلتفرم مدیریت پروژه سطح کسب‌وکار با همکاری تیم، اشتراک فایل و ردیابی پیشرفت.",
-    project_3_title: "پورتال مراقبت‌های بهداشتی",
-    project_3_desc: "نظام مدیریت بیمار امن با جدول‌ریزی نوبت، پرونده‌های پزشکی و ویژگی‌های مراقبت از راه دور.",
-    project_4_title: "اپلیکیشن چت هوشمند",
-    project_4_desc: "چت‌بات هوشمند با پردازش زبان طبیعی و پاسخ‌دهی به صورت لحظه‌ای.",
-    project_5_title: "پلتفرم شبکه اجتماعی",
-    project_5_desc: "پلتفرم شبکه اجتماعی پرکاربرد با پیام‌رسانی لحظه‌ای و اشتراک‌گذاری محتوا.",
+    project_1_title: "وب‌سایت لطفی پیانو",
+    project_1_desc: "سایت معرفی و فروش پیانو، پشتیبانی فنی و ثبت درخواست سرویس برای مشتریان.",
+    project_2_title: "پلتفرم گم‌گشته",
+    project_2_desc: "پلتفرم غیرانتفاعی برای آگهی اشیای گم‌شده و پیداشده و ارتباط با کاربران.",
+    project_3_title: "سیستم مدیریت مشتری پلاک هفت",
+    project_3_desc: "مدیریت مشتری و رویداد برای خدمات عروسی پلاک هفت.",
+    project_4_title: "اپ خوابم میاد",
+    project_4_desc: "اپ موبایل برای کیفیت خواب، ردیابی و مدیتیشن.",
+    project_5_title: "اپ ماسک",
+    project_5_desc: "تشخیص ماسک و چهره با هوش مصنوعی روی دستگاه.",
+    project_6_title: "اپ فریسام",
+    project_6_desc: "اپ فروش و معرفی محصولات شرکت فریسام.",
+    project_7_title: "اپ تشخیص اجسام با هوش مصنوعی",
+    project_7_desc: "تشخیص اجسام و حالت بدن در لحظه با انتخاب مدل (MobileNet، YOLOv2، PoseNet).",
+    project_8_title: "وب‌سایت شادی‌آوران",
+    project_8_desc: "سایت قرعه‌کشی و اعطای کد تخفیف برای مشتریان.",
+    project_9_title: "وب‌سایت لوسو هوم",
+    project_9_desc: "نمایش و فروش محصولات لوسو هوم.",
     project_click_preview: "پیش‌نمایش",
 
     // Contact Section
@@ -457,16 +473,24 @@ exp_3_desc_1: "تطوير تطبيقات ويب باستخدام إطار لار
     // Projects Section
     projects_title: "المشاريع المميزة",
     projects_subtitle: "بعض أعمالي الحديثة",
-    project_1_title: "تطبيق تجارة إلكترونية",
-    project_1_desc: "تطبيق تسوق كامل الميزات مع مخزون فوري، مدفوعات آمنة، وتوصيات مخصصة.",
-    project_2_title: "نظام إدارة المهام",
-    project_2_desc: "منصة إدارة مشاريع مستوى الشركات مع تعاون الفريق، مشاركة الملفات، وتتبع التقدم.",
-    project_3_title: "بوابة الرعاية الصحية",
-    project_3_desc: "نظام إدارة المرضى الآمن مع جدولة المواعيد، السجلات الطبية، وميزات الرعاية عن بُعد.",
-    project_4_title: "تطبيق الدردشة الذكية",
-    project_4_desc: "روبوت دردشة ذكي بمعالجة اللغة الطبيعية واستجابات فورية.",
-    project_5_title: "منصة التواصل الاجتماعي",
-    project_5_desc: "منصة تواصل اجتماعي غنية بالمواصفات مع رسائل فورية ومشاركة المحتوى.",
+    project_1_title: "موقع لطفي بيانو",
+    project_1_desc: "موقع الشركة لعرض البيانو والبيع، مع الدعم الفني وطلبات الخدمة.",
+    project_2_title: "منصة گم‌گشته",
+    project_2_desc: "منصة غير ربحية للإعلان عن المفقودات والموجودات والتواصل بين المستخدمين.",
+    project_3_title: "نظام عملاء پلاک هفت",
+    project_3_desc: "إدارة العملاء والفعاليات لخدمات أعراس پلاک هفت.",
+    project_4_title: "تطبيق خوابم میاد",
+    project_4_desc: "تطبيق للنوم والتتبع والتأمل.",
+    project_5_title: "تطبيق الكمامة",
+    project_5_desc: "كشف الكمامة والتعرف على الوجه بالذكاء الاصطناعي على الجهاز.",
+    project_6_title: "تطبيق فریسام",
+    project_6_desc: "تطبيق لبيع وعرض منتجات شركة فریسام.",
+    project_7_title: "تطبيق كشف الأجسام بالذكاء الاصطناعي",
+    project_7_desc: "كشف الأجسام ووضعية الجسم في الوقت الفعلي مع اختيار النموذج (MobileNet، YOLOv2، PoseNet).",
+    project_8_title: "موقع شادي آوران",
+    project_8_desc: "موقع لليانصيب ومنح أكواد خصم للعملاء.",
+    project_9_title: "موقع لوسو هوم",
+    project_9_desc: "عرض وبيع منتجات لوسو هوم.",
     project_click_preview: "معاينة",
 
     // Contact Section
@@ -773,17 +797,16 @@ function updateProjects(t) {
   if (sectionTitle) sectionTitle.textContent = t.projects_title;
   if (sectionSubtitle) sectionSubtitle.textContent = t.projects_subtitle;
   
-  if (projectCards.length >= 5) {
-    projectCards[0].querySelector('h3').textContent = t.project_1_title;
-    projectCards[0].querySelector('p').textContent = t.project_1_desc;
-    projectCards[1].querySelector('h3').textContent = t.project_2_title;
-    projectCards[1].querySelector('p').textContent = t.project_2_desc;
-    projectCards[2].querySelector('h3').textContent = t.project_3_title;
-    projectCards[2].querySelector('p').textContent = t.project_3_desc;
-    projectCards[3].querySelector('h3').textContent = t.project_4_title;
-    projectCards[3].querySelector('p').textContent = t.project_4_desc;
-    projectCards[4].querySelector('h3').textContent = t.project_5_title;
-    projectCards[4].querySelector('p').textContent = t.project_5_desc;
+  for (let i = 0; i < projectCards.length && i < 9; i++) {
+    const titleKey = `project_${i + 1}_title`;
+    const descKey = `project_${i + 1}_desc`;
+    const title = t[titleKey];
+    const desc = t[descKey];
+    if (!title || !desc) continue;
+    const h3 = projectCards[i].querySelector('h3');
+    const p = projectCards[i].querySelector('p');
+    if (h3) h3.textContent = title;
+    if (p) p.textContent = desc;
   }
 }
 
