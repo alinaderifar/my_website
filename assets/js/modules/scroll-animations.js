@@ -6,9 +6,9 @@ let observer = null;
 let onScroll = null;
 let onLoadReveal = null;
 
-const SECTION_SELECTORS =
-  '#home, #build, #services, #projects, #workflow, #proof, #contact';
-const CARD_SELECTOR = '.project-showcase-card, .build-card, .workflow-step, .proof-stat';
+const SECTION_SELECTORS = '#home';
+const REVEAL_SELECTORS =
+  '.section-header, .build-card, .service-column, .project-showcase-card, .workflow-step, .proof-stat, .proof-links, .contact-layout';
 
 function revealElement(el) {
   el.classList.add('is-visible');
@@ -18,7 +18,7 @@ function isInRevealViewport(el) {
   const rect = el.getBoundingClientRect();
   const vh = window.innerHeight || document.documentElement.clientHeight || 0;
   if (rect.height <= 0) return false;
-  return rect.bottom > 0 && rect.top < vh * 0.92;
+  return rect.bottom > 0 && rect.top < vh * 0.98;
 }
 
 function scanRevealTargets(targets) {
@@ -33,8 +33,8 @@ export function initScrollAnimations() {
 
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const sections = document.querySelectorAll(SECTION_SELECTORS);
-  const cards = document.querySelectorAll(CARD_SELECTOR);
-  const targets = [...sections, ...cards];
+  const revealItems = document.querySelectorAll(REVEAL_SELECTORS);
+  const targets = [...sections, ...revealItems];
 
   if (!targets.length) return;
 
@@ -82,11 +82,16 @@ export function initScrollAnimations() {
   }
 
   const runRevealScan = () => scanRevealTargets(targets);
-  requestAnimationFrame(() => {
-    requestAnimationFrame(runRevealScan);
-  });
-  onLoadReveal = runRevealScan;
-  window.addEventListener('load', onLoadReveal, { once: true });
+
+  if (document.body.classList.contains('site-commercial')) {
+    targets.forEach(revealElement);
+  } else {
+    requestAnimationFrame(() => {
+      requestAnimationFrame(runRevealScan);
+    });
+    onLoadReveal = runRevealScan;
+    window.addEventListener('load', onLoadReveal, { once: true });
+  }
 }
 
 export function cleanupScrollAnimations() {

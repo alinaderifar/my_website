@@ -14,7 +14,7 @@ const translations = {
     nav_proof: "Proof",
     nav_contact: "Contact",
 
-    hero_eyebrow: "Ali Naderifar",
+    hero_eyebrow: "Available for new projects",
     hero_headline: "AI Automation & Full-Stack Developer for Startups and Businesses",
     hero_subheadline: "I build AI-powered systems, SaaS platforms, automations, and rapid MVPs using Laravel, APIs, and modern web technologies.",
     hero_btn_primary: "View Projects",
@@ -122,7 +122,7 @@ const translations = {
     nav_proof: "اثبات کار",
     nav_contact: "تماس",
 
-    hero_eyebrow: "علی نادری‌فر",
+    hero_eyebrow: "آماده پروژه‌های جدید",
     hero_headline: "توسعه‌دهنده اتوماسیون هوش مصنوعی و فول‌استک برای استارتاپ‌ها و کسب‌وکارها",
     hero_subheadline: "سیستم‌های مبتنی بر هوش مصنوعی، پلتفرم‌های SaaS، اتوماسیون و MVP سریع با Laravel، API و فناوری‌های وب مدرن می‌سازم.",
     hero_btn_primary: "مشاهده پروژه‌ها",
@@ -230,7 +230,7 @@ const translations = {
     nav_proof: "الإثبات",
     nav_contact: "اتصل",
 
-    hero_eyebrow: "علي نادري فر",
+    hero_eyebrow: "متاح لمشاريع جديدة",
     hero_headline: "مطور أتمتة الذكاء الاصطناعي وفول ستاك للشركات الناشئة والأعمال",
     hero_subheadline: "أبني أنظمة مدعومة بالذكاء الاصطناعي ومنصات SaaS وأتمتة وMVP سريعة باستخدام Laravel وواجهات برمجة التطبيقات والتقنيات الحديثة.",
     hero_btn_primary: "عرض المشاريع",
