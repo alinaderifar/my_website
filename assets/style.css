@@ -3470,3 +3470,380 @@ html.js-scroll-reveal .scroll-reveal.is-visible {
     height: 20px;
   }
 }
+
+/* ==========================================================================
+   Commercial landing (startup engineer)
+   ========================================================================== */
+
+.hero--commercial {
+  padding: 6rem 0 5rem;
+  text-align: center;
+  background: linear-gradient(180deg, var(--bg) 0%, var(--bg-alt) 100%);
+}
+
+.hero--commercial .container {
+  max-width: 820px;
+}
+
+.hero-eyebrow {
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--primary-light);
+  margin-bottom: 1rem;
+}
+
+.hero-headline {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.25rem;
+  color: var(--text);
+}
+
+.hero-subheadline {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  max-width: 640px;
+  margin: 0 auto 2rem;
+  line-height: 1.7;
+}
+
+.hero--commercial .hero-actions {
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+.hero--commercial .btn-primary {
+  background: var(--primary);
+  box-shadow: none;
+}
+
+.hero--commercial .btn-primary:hover {
+  background: var(--primary-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.35);
+}
+
+.nav-brand {
+  text-decoration: none;
+  color: var(--text);
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.build-grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.build-card {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-weight: 500;
+  color: var(--text);
+}
+
+.build-card__icon {
+  color: var(--primary-light);
+  font-size: 0.65rem;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.service-column {
+  padding: 2rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.service-column__title {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.25rem;
+  margin-bottom: 1.25rem;
+  color: var(--text);
+}
+
+.service-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.service-list li {
+  padding-left: 1.25rem;
+  position: relative;
+  color: var(--text-secondary);
+}
+
+.service-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--primary);
+}
+
+body[dir="rtl"] .service-list li {
+  padding-left: 0;
+  padding-right: 1.25rem;
+}
+
+body[dir="rtl"] .service-list li::before {
+  left: auto;
+  right: 0;
+}
+
+.projects-showcase {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.project-showcase-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: start;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.project-showcase-card:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.project-showcase-cover {
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--card);
+  aspect-ratio: 16 / 10;
+}
+
+.project-showcase-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.project-showcase-cover--placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.project-showcase-body h3 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.35rem;
+  margin-bottom: 0.75rem;
+}
+
+.project-outcome {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+}
+
+.project-value {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.25rem;
+  line-height: 1.6;
+}
+
+.project-showcase-body .project-tech {
+  margin-bottom: 1.25rem;
+}
+
+.btn-sm {
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+}
+
+.btn-disabled {
+  pointer-events: none;
+  opacity: 0.65;
+  cursor: default;
+}
+
+.workflow-steps {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  counter-reset: workflow;
+}
+
+.workflow-step {
+  padding: 1.5rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.workflow-step__num {
+  display: block;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--primary-light);
+  margin-bottom: 0.75rem;
+}
+
+.workflow-step h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.workflow-step p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.proof-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.proof-stat {
+  text-align: center;
+  padding: 1.5rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.proof-stat__value {
+  display: block;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-light);
+  margin-bottom: 0.35rem;
+}
+
+.proof-stat__label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.proof-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.proof-link {
+  color: var(--primary-light);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.proof-link:hover {
+  text-decoration: underline;
+}
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.contact-link--primary {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.contact-telegram {
+  display: inline-flex;
+  margin-top: 0.25rem;
+}
+
+.contact-form .form-group {
+  margin-bottom: 1.25rem;
+}
+
+.contact-form label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.35rem;
+  color: var(--text-secondary);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+@media (max-width: 900px) {
+  .project-showcase-card {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Tone down decorative motion on commercial layout */
+.hero--commercial .phone-mockup,
+.hero--commercial .hero-image {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-image,
+  .phone-mockup,
+  .phone-mockup-3d {
+    animation: none !important;
+  }
+}

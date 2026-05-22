@@ -7,14 +7,11 @@ let onScroll = null;
 let onLoadReveal = null;
 
 const SECTION_SELECTORS =
-  '.hero-content, .hero-image, #about, #skills, #experience, #projects, #contact';
-const CARD_SELECTOR = '.project-card';
+  '#home, #build, #services, #projects, #workflow, #proof, #contact';
+const CARD_SELECTOR = '.project-showcase-card, .build-card, .workflow-step, .proof-stat';
 
 function revealElement(el) {
   el.classList.add('is-visible');
-  if (el.id === 'skills' || el.id === 'experience') {
-    el.classList.add('in-view');
-  }
 }
 
 function isInRevealViewport(el) {

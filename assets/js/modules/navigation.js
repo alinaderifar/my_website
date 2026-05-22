@@ -69,6 +69,10 @@ function setupNavbarScrollEffect() {
   let ticking = false;
   
   const updateNavbar = () => {
+    if (!navbar) {
+      ticking = false;
+      return;
+    }
     if (window.pageYOffset > 50) {
       navbar.classList.add('scrolled');
     } else {

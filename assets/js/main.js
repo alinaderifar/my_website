@@ -6,8 +6,6 @@
 import { initAccessibility } from './modules/accessibility.js';
 import { EventHandler } from './modules/event-handlers.js';
 import { initTranslations, getCurrentLanguage, setLanguage } from './modules/translations.js';
-import { initDeviceShowcase } from './modules/device-showcase.js';
-import { initInteractiveDemos } from './modules/interactive-demos.js';
 import { initScrollAnimations } from './modules/scroll-animations.js';
 import { initNavigation } from './modules/navigation.js';
 import { initForms } from './modules/forms.js';
@@ -43,11 +41,6 @@ export function init() {
     initNavigation();
     initForms();
 
-    // Initialize skill hover effects
-    initSkillPowerEffects();
-
-    initHeroPhoneTabs();
-    initProjectMobilePreview();
 
     // Store cleanup functions
     appState.cleanupFunctions.push(cleanup);
@@ -87,99 +80,6 @@ export function init() {
     appState.initialized = false;
     showInitError();
   }
-}
-
-/**
- * Initialize skill category power-on effects
- * Adds 'powered' class on hover to trigger circuit animation
- * The class stays after hover to maintain the powered state
- */
-function initSkillPowerEffects() {
-  const skillCategories = document.querySelectorAll('.skill-category');
-  
-  skillCategories.forEach(category => {
-    // Add powered class on mouse enter
-    category.addEventListener('mouseenter', () => {
-      category.classList.add('powered');
-    });
-    
-    // Note: We intentionally do NOT remove 'powered' on mouseleave
-    // This keeps the animation in its final state after first hover
-    // If you want users to be able to "power off", uncomment below:
-    // category.addEventListener('mouseleave', () => {
-    //   category.classList.remove('powered');
-    // });
-  });
-}
-
-/**
- * Hero phone mockup: tab bar switches visible panels
- */
-function initHeroPhoneTabs() {
-  const screen = document.querySelector('.flutter-app-screen');
-  if (!screen) return;
-
-  const nav = screen.querySelector('.app-nav');
-  const buttons = nav ? nav.querySelectorAll('.nav-item[data-app-tab]') : [];
-  const panels = screen.querySelectorAll('.app-tab-panel[data-app-tab]');
-  if (!buttons.length || !panels.length) return;
-
-  const activate = (tab) => {
-    buttons.forEach((btn) => {
-      const on = btn.dataset.appTab === tab;
-      btn.classList.toggle('active', on);
-      btn.setAttribute('aria-selected', on ? 'true' : 'false');
-    });
-    panels.forEach((panel) => {
-      const on = panel.dataset.appTab === tab;
-      panel.classList.toggle('is-active', on);
-    });
-  };
-
-  buttons.forEach((btn) => {
-    btn.addEventListener('click', () => activate(btn.dataset.appTab));
-  });
-}
-
-/**
- * Mobile: project cards use a button to show image preview (no hover)
- */
-function initProjectMobilePreview() {
-  const cards = document.querySelectorAll('.project-card');
-  if (!cards.length) return;
-
-  const closeAll = () => {
-    cards.forEach((card) => {
-      card.classList.remove('preview-open');
-      const toggle = card.querySelector('.project-preview-toggle');
-      if (toggle) toggle.setAttribute('aria-expanded', 'false');
-    });
-  };
-
-  cards.forEach((card) => {
-    const btn = card.querySelector('.project-preview-toggle');
-    if (!btn) return;
-
-    btn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const opening = !card.classList.contains('preview-open');
-      closeAll();
-      if (opening) {
-        card.classList.add('preview-open');
-        btn.setAttribute('aria-expanded', 'true');
-      }
-    });
-  });
-
-  document.addEventListener('click', (e) => {
-    if (!e.target.closest('.project-card')) {
-      closeAll();
-    }
-  });
-
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeAll();
-  });
 }
 
 /**
@@ -255,30 +155,3 @@ document.addEventListener('visibilitychange', () => {
 
 // Export for debugging
 window.App = { init, destroy, getState };
-
-function initProjectPreviewImages() {
-  const projectCards = document.querySelectorAll('.project-card');
-  projectCards.forEach((card) => {
-    const imageName = card.getAttribute('data-image');
-    const previewImage = card.querySelector('.preview-image');
-    if (!previewImage) return;
-    previewImage.classList.remove('preview-image--placeholder');
-    if (imageName && imageName !== 'placeholder') {
-      const url = new URL(`assets/images/${imageName}`, document.baseURI).href;
-      previewImage.style.backgroundImage = `url('${url}')`;
-      previewImage.querySelectorAll('.preview-placeholder-label').forEach((el) => el.remove());
-    } else {
-      previewImage.style.backgroundImage = 'none';
-      previewImage.classList.add('preview-image--placeholder');
-    }
-  });
-}
-
-// Initialize project hover images (module may run after DOMContentLoaded when deferred)
-if (shouldAutoInit) {
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initProjectPreviewImages);
-  } else {
-    initProjectPreviewImages();
-  }
-}
