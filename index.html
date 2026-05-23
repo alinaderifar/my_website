@@ -1,375 +1,800 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ali Naderifar — AI Automation &amp; Full-Stack Developer</title>
-    <meta name="description" content="AI automation and full-stack development for startups and businesses. MVPs, SaaS, dashboards, API integrations, and workflow automation with Laravel and modern web tech.">
-    <meta name="author" content="Ali Naderifar">
-    <link rel="canonical" href="https://alinaderifar.info/">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://alinaderifar.info/">
-    <meta property="og:title" content="Ali Naderifar — AI Automation &amp; Full-Stack Developer">
-    <meta property="og:description" content="AI-powered systems, SaaS platforms, automations, and rapid MVPs for startups and businesses.">
-    <meta property="og:image" content="https://alinaderifar.info/assets/images/aiobject.png">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Ali Naderifar — AI Automation &amp; Full-Stack Developer">
-    <meta name="twitter:description" content="AI automation and full-stack development for startups and businesses.">
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="assets/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <meta
+      name="description"
+      content="AI automation and full-stack development for startups and businesses. MVPs, SaaS, dashboards, API integrations, and workflow automation with Laravel and modern web tech."
+    />
+    <meta name="author" content="Ali Naderifar" />
+    <link rel="canonical" href="https://alinaderifar.info/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://alinaderifar.info/" />
+    <meta
+      property="og:title"
+      content="Ali Naderifar — AI Automation &amp; Full-Stack Developer"
+    />
+    <meta
+      property="og:description"
+      content="AI-powered systems, SaaS platforms, automations, and rapid MVPs for startups and businesses."
+    />
+    <meta
+      property="og:image"
+      content="https://alinaderifar.info/assets/images/aiobject.png"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Ali Naderifar — AI Automation &amp; Full-Stack Developer"
+    />
+    <meta
+      name="twitter:description"
+      content="AI automation and full-stack development for startups and businesses."
+    />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="assets/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
     <style>
-        :root {
-            --primary: #4f46e5;
-            --primary-dark: #4338ca;
-            --primary-light: #6366f1;
-            --secondary: #7c3aed;
-            --bg: #0b1120;
-            --bg-alt: #111827;
-            --card: #151d2e;
-            --text: #f8fafc;
-            --text-secondary: #94a3b8;
-            --text-muted: #64748b;
-            --border: #1e293b;
-            --radius: 10px;
-            --radius-sm: 6px;
-            --transition: all 0.2s ease;
+      :root {
+        --primary: #4f46e5;
+        --primary-dark: #4338ca;
+        --primary-light: #6366f1;
+        --secondary: #7c3aed;
+        --bg: #0b1120;
+        --bg-alt: #111827;
+        --card: #151d2e;
+        --text: #f8fafc;
+        --text-secondary: #94a3b8;
+        --text-muted: #64748b;
+        --border: #1e293b;
+        --radius: 10px;
+        --radius-sm: 6px;
+        --transition: all 0.2s ease;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+      body.loading {
+        overflow: hidden;
+      }
+      .page-loader {
+        position: fixed;
+        inset: 0;
+        background: var(--bg);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        transition: opacity 0.4s ease, visibility 0.4s ease;
+      }
+      .page-loader.hidden {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+      }
+      .loader-spinner {
+        width: 36px;
+        height: 36px;
+        border: 2px solid var(--border);
+        border-top-color: var(--primary);
+        border-radius: 50%;
+        animation: spin 0.8s linear infinite;
+      }
+      .loader-text {
+        margin-top: 0.75rem;
+        color: var(--text-muted);
+        font-size: 0.875rem;
+      }
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
         }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: var(--bg);
-            color: var(--text);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-        body.loading { overflow: hidden; }
-        .page-loader {
-            position: fixed; inset: 0;
-            background: var(--bg);
-            display: flex; flex-direction: column;
-            align-items: center; justify-content: center;
-            z-index: 9999;
-            transition: opacity 0.4s ease, visibility 0.4s ease;
-        }
-        .page-loader.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+      }
+      @media (prefers-reduced-motion: reduce) {
         .loader-spinner {
-            width: 36px; height: 36px;
-            border: 2px solid var(--border);
-            border-top-color: var(--primary);
-            border-radius: 50%;
-            animation: spin 0.8s linear infinite;
+          animation: none;
         }
-        .loader-text { margin-top: 0.75rem; color: var(--text-muted); font-size: 0.875rem; }
-        @keyframes spin { to { transform: rotate(360deg); } }
-        @media (prefers-reduced-motion: reduce) {
-            .loader-spinner { animation: none; }
-            html { scroll-behavior: auto; }
+        html {
+          scroll-behavior: auto;
         }
+      }
     </style>
-</head>
-<body class="loading site-commercial">
+  </head>
+  <body class="loading site-commercial">
     <div class="page-loader" id="pageLoader" aria-hidden="true">
-        <div class="loader-spinner"></div>
-        <p class="loader-text">Loading…</p>
+      <div class="loader-spinner"></div>
+      <p class="loader-text">Loading…</p>
     </div>
 
     <nav class="navbar" role="navigation" aria-label="Main navigation">
-        <div class="container">
-            <a href="#home" class="nav-brand" data-i18n="nav_brand">Ali Naderifar</a>
-            <div class="nav-links">
-                <a href="#build" class="nav-link" data-i18n="nav_build">What I Build</a>
-                <a href="#services" class="nav-link" data-i18n="nav_services">Services</a>
-                <a href="#projects" class="nav-link" data-i18n="nav_projects">Projects</a>
-                <a href="#workflow" class="nav-link" data-i18n="nav_workflow">Process</a>
-                <a href="#proof" class="nav-link" data-i18n="nav_proof">Proof</a>
-                <a href="#contact" class="nav-link" data-i18n="nav_contact">Contact</a>
-            </div>
-            <div class="language-switcher">
-                <button class="lang-btn active" type="button" data-lang="en" aria-label="English">EN</button>
-                <button class="lang-btn" type="button" data-lang="fa" aria-label="Farsi">FA</button>
-                <button class="lang-btn" type="button" data-lang="ar" aria-label="Arabic">AR</button>
-            </div>
+      <div class="container">
+        <a href="#home" class="nav-brand" data-i18n="nav_brand"
+          >Ali Naderifar</a
+        >
+        <div class="nav-links">
+          <a href="#build" class="nav-link" data-i18n="nav_build"
+            >What I Build</a
+          >
+          <a href="#services" class="nav-link" data-i18n="nav_services"
+            >Services</a
+          >
+          <a href="#projects" class="nav-link" data-i18n="nav_projects"
+            >Projects</a
+          >
+          <a href="#workflow" class="nav-link" data-i18n="nav_workflow"
+            >Process</a
+          >
+          <a href="#proof" class="nav-link" data-i18n="nav_proof">Proof</a>
+          <a href="#contact" class="nav-link" data-i18n="nav_contact"
+            >Contact</a
+          >
         </div>
+        <div class="language-switcher">
+          <button
+            class="lang-btn active"
+            type="button"
+            data-lang="en"
+            aria-label="English"
+          >
+            EN
+          </button>
+          <button
+            class="lang-btn"
+            type="button"
+            data-lang="fa"
+            aria-label="Farsi"
+          >
+            FA
+          </button>
+          <button
+            class="lang-btn"
+            type="button"
+            data-lang="ar"
+            aria-label="Arabic"
+          >
+            AR
+          </button>
+        </div>
+      </div>
     </nav>
 
     <main id="main">
-        <!-- Hero -->
-        <section id="home" class="hero hero--commercial" aria-labelledby="hero-title">
-            <div class="container">
-                <p class="hero-eyebrow" data-i18n="hero_eyebrow">Available for new projects</p>
-                <h1 id="hero-title" class="hero-headline" data-i18n="hero_headline">AI Automation &amp; Full-Stack Developer for Startups and Businesses</h1>
-                <p class="hero-subheadline" data-i18n="hero_subheadline">I build AI-powered systems, SaaS platforms, automations, and rapid MVPs using Laravel, APIs, and modern web technologies.</p>
-                <div class="hero-actions">
-                    <a href="#projects" class="btn btn-primary" data-i18n="hero_btn_primary">View Projects</a>
-                    <a href="#contact" class="btn btn-secondary" data-i18n="hero_btn_secondary">Book a Call</a>
-                </div>
+      <!-- Hero -->
+      <section
+        id="home"
+        class="hero hero--commercial"
+        aria-labelledby="hero-title"
+      >
+        <div class="container">
+          <p class="hero-eyebrow" data-i18n="hero_eyebrow">
+            Available for new projects
+          </p>
+          <h1 id="hero-title" class="hero-headline" data-i18n="hero_headline">
+            AI Automation &amp; Full-Stack Developer for Startups and Businesses
+          </h1>
+          <p class="hero-subheadline" data-i18n="hero_subheadline">
+            I build AI-powered systems, SaaS platforms, automations, and rapid
+            MVPs using Laravel, APIs, and modern web technologies.
+          </p>
+          <div class="hero-actions">
+            <a
+              href="#projects"
+              class="btn btn-primary"
+              data-i18n="hero_btn_primary"
+              >View Projects</a
+            >
+            <a
+              href="#contact"
+              class="btn btn-secondary"
+              data-i18n="hero_btn_secondary"
+              >Book a Call</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- What I Build -->
+      <section id="build" class="section" aria-labelledby="build-title">
+        <div class="container">
+          <div class="section-header">
+            <h2 id="build-title" class="section-title" data-i18n="build_title">
+              What I Build
+            </h2>
+            <p class="section-subtitle" data-i18n="build_subtitle">
+              Production systems that save time, reduce manual work, and scale
+              with your business.
+            </p>
+          </div>
+          <ul class="build-grid">
+            <li class="build-card">
+              <span class="build-card__icon" aria-hidden="true">◇</span
+              ><span data-i18n="build_1">AI Automation Systems</span>
+            </li>
+            <li class="build-card">
+              <span class="build-card__icon" aria-hidden="true">◇</span
+              ><span data-i18n="build_2">Startup MVPs</span>
+            </li>
+            <li class="build-card">
+              <span class="build-card__icon" aria-hidden="true">◇</span
+              ><span data-i18n="build_3">Internal Dashboards</span>
+            </li>
+            <li class="build-card">
+              <span class="build-card__icon" aria-hidden="true">◇</span
+              ><span data-i18n="build_4">SaaS Platforms</span>
+            </li>
+            <li class="build-card">
+              <span class="build-card__icon" aria-hidden="true">◇</span
+              ><span data-i18n="build_5">API Integrations</span>
+            </li>
+            <li class="build-card">
+              <span class="build-card__icon" aria-hidden="true">◇</span
+              ><span data-i18n="build_6">Telegram / WhatsApp Automations</span>
+            </li>
+            <li class="build-card">
+              <span class="build-card__icon" aria-hidden="true">◇</span
+              ><span data-i18n="build_7">Crypto Payment Integrations</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Services -->
+      <section
+        id="services"
+        class="section section-alt"
+        aria-labelledby="services-title"
+      >
+        <div class="container">
+          <div class="section-header">
+            <h2
+              id="services-title"
+              class="section-title"
+              data-i18n="services_title"
+            >
+              Services
+            </h2>
+            <p class="section-subtitle" data-i18n="services_subtitle">
+              Clear offerings for founders and operators who need reliable
+              execution.
+            </p>
+          </div>
+          <div class="services-grid">
+            <div class="service-column">
+              <h3
+                class="service-column__title"
+                data-i18n="services_startup_title"
+              >
+                For Startups
+              </h3>
+              <ul class="service-list">
+                <li data-i18n="services_startup_1">Rapid MVP Development</li>
+                <li data-i18n="services_startup_2">AI Integrations</li>
+                <li data-i18n="services_startup_3">SaaS Development</li>
+                <li data-i18n="services_startup_4">API Systems</li>
+              </ul>
             </div>
-        </section>
-
-        <!-- What I Build -->
-        <section id="build" class="section" aria-labelledby="build-title">
-            <div class="container">
-                <div class="section-header">
-                    <h2 id="build-title" class="section-title" data-i18n="build_title">What I Build</h2>
-                    <p class="section-subtitle" data-i18n="build_subtitle">Production systems that save time, reduce manual work, and scale with your business.</p>
-                </div>
-                <ul class="build-grid">
-                    <li class="build-card"><span class="build-card__icon" aria-hidden="true">◇</span><span data-i18n="build_1">AI Automation Systems</span></li>
-                    <li class="build-card"><span class="build-card__icon" aria-hidden="true">◇</span><span data-i18n="build_2">Startup MVPs</span></li>
-                    <li class="build-card"><span class="build-card__icon" aria-hidden="true">◇</span><span data-i18n="build_3">Internal Dashboards</span></li>
-                    <li class="build-card"><span class="build-card__icon" aria-hidden="true">◇</span><span data-i18n="build_4">SaaS Platforms</span></li>
-                    <li class="build-card"><span class="build-card__icon" aria-hidden="true">◇</span><span data-i18n="build_5">API Integrations</span></li>
-                    <li class="build-card"><span class="build-card__icon" aria-hidden="true">◇</span><span data-i18n="build_6">Telegram / WhatsApp Automations</span></li>
-                    <li class="build-card"><span class="build-card__icon" aria-hidden="true">◇</span><span data-i18n="build_7">Crypto Payment Integrations</span></li>
-                </ul>
+            <div class="service-column">
+              <h3
+                class="service-column__title"
+                data-i18n="services_business_title"
+              >
+                For Businesses
+              </h3>
+              <ul class="service-list">
+                <li data-i18n="services_business_1">AI Customer Automation</li>
+                <li data-i18n="services_business_2">Workflow Automation</li>
+                <li data-i18n="services_business_3">Booking Systems</li>
+                <li data-i18n="services_business_4">
+                  CRM &amp; Dashboard Systems
+                </li>
+              </ul>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <!-- Services -->
-        <section id="services" class="section section-alt" aria-labelledby="services-title">
-            <div class="container">
-                <div class="section-header">
-                    <h2 id="services-title" class="section-title" data-i18n="services_title">Services</h2>
-                    <p class="section-subtitle" data-i18n="services_subtitle">Clear offerings for founders and operators who need reliable execution.</p>
+      <!-- Projects -->
+      <section id="projects" class="section" aria-labelledby="projects-title">
+        <div class="container">
+          <div class="section-header">
+            <h2
+              id="projects-title"
+              class="section-title"
+              data-i18n="projects_title"
+            >
+              Selected Work
+            </h2>
+            <p class="section-subtitle" data-i18n="projects_subtitle">
+              Shipped products with measurable outcomes — not concept mockups.
+            </p>
+          </div>
+          <div class="projects-showcase">
+            <article
+              class="project-showcase-card"
+              data-project-num="1"
+              data-image="placeholder"
+            >
+              <div
+                class="project-showcase-cover project-showcase-cover--placeholder"
+                data-i18n="project_preview_coming_soon"
+              >
+                Coming soon
+              </div>
+              <div class="project-showcase-body">
+                <h3 data-i18n="project_1_title">Lotfi Piano</h3>
+                <p class="project-outcome" data-i18n="project_1_outcome">
+                  E-commerce and service-request portal for a piano retailer
+                  with product catalog and support workflows.
+                </p>
+                <p class="project-value" data-i18n="project_1_value">
+                  Centralizes sales, technical support, and customer requests in
+                  one branded web experience.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">Next.js</span
+                  ><span class="tech-tag">Laravel</span
+                  ><span class="tech-tag">TypeScript</span>
                 </div>
-                <div class="services-grid">
-                    <div class="service-column">
-                        <h3 class="service-column__title" data-i18n="services_startup_title">For Startups</h3>
-                        <ul class="service-list">
-                            <li data-i18n="services_startup_1">Rapid MVP Development</li>
-                            <li data-i18n="services_startup_2">AI Integrations</li>
-                            <li data-i18n="services_startup_3">SaaS Development</li>
-                            <li data-i18n="services_startup_4">API Systems</li>
-                        </ul>
-                    </div>
-                    <div class="service-column">
-                        <h3 class="service-column__title" data-i18n="services_business_title">For Businesses</h3>
-                        <ul class="service-list">
-                            <li data-i18n="services_business_1">AI Customer Automation</li>
-                            <li data-i18n="services_business_2">Workflow Automation</li>
-                            <li data-i18n="services_business_3">Booking Systems</li>
-                            <li data-i18n="services_business_4">CRM &amp; Dashboard Systems</li>
-                        </ul>
-                    </div>
+                <span
+                  class="btn btn-secondary btn-sm btn-disabled"
+                  data-i18n="project_demo_soon"
+                  >Demo coming soon</span
+                >
+              </div>
+            </article>
+
+            <article
+              class="project-showcase-card"
+              data-project-num="2"
+              data-image="gomgashteh.png"
+            >
+              <div class="project-showcase-cover">
+                <img
+                  src="assets/images/gomgashteh.png"
+                  alt="Gomgashteh lost and found platform"
+                  width="640"
+                  height="360"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="project-showcase-body">
+                <h3 data-i18n="project_2_title">Gomgashteh Platform</h3>
+                <p class="project-outcome" data-i18n="project_2_outcome">
+                  Community platform for posting and recovering lost items with
+                  user matching and notifications.
+                </p>
+                <p class="project-value" data-i18n="project_2_value">
+                  Helps people reunite with belongings faster while keeping
+                  operations lightweight for a non-profit model.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">Flutter</span
+                  ><span class="tech-tag">Laravel</span
+                  ><span class="tech-tag">MySQL</span>
                 </div>
+                <span
+                  class="btn btn-secondary btn-sm btn-disabled"
+                  data-i18n="project_demo_soon"
+                  >Demo coming soon</span
+                >
+              </div>
+            </article>
+
+            <article
+              class="project-showcase-card"
+              data-project-num="3"
+              data-image="pelakhaft.png"
+            >
+              <div class="project-showcase-cover">
+                <img
+                  src="assets/images/pelakhaft.png"
+                  alt="Pelak Haft customer management"
+                  width="640"
+                  height="360"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="project-showcase-body">
+                <h3 data-i18n="project_3_title">Pelak Haft CRM</h3>
+                <p class="project-outcome" data-i18n="project_3_outcome">
+                  Customer and event management system for a wedding services
+                  company with scheduling and client records.
+                </p>
+                <p class="project-value" data-i18n="project_3_value">
+                  Replaces scattered spreadsheets with one system staff use
+                  daily for bookings and follow-ups.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">Flutter</span
+                  ><span class="tech-tag">Laravel</span
+                  ><span class="tech-tag">PostgreSQL</span>
+                </div>
+                <span
+                  class="btn btn-secondary btn-sm btn-disabled"
+                  data-i18n="project_demo_soon"
+                  >Demo coming soon</span
+                >
+              </div>
+            </article>
+
+            <article
+              class="project-showcase-card"
+              data-project-num="4"
+              data-image="khabamMiad.png"
+            >
+              <div class="project-showcase-cover">
+                <img
+                  src="assets/images/khabamMiad.png"
+                  alt="Khabam Miad sleep app"
+                  width="640"
+                  height="360"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="project-showcase-body">
+                <h3 data-i18n="project_4_title">Khabam Miad</h3>
+                <p class="project-outcome" data-i18n="project_4_outcome">
+                  Mobile app for sleep tracking, guided meditation, and
+                  habit-building around better rest.
+                </p>
+                <p class="project-value" data-i18n="project_4_value">
+                  Gives users daily insights and routines to improve sleep
+                  quality over time.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">Flutter</span
+                  ><span class="tech-tag">Laravel</span>
+                </div>
+                <span
+                  class="btn btn-secondary btn-sm btn-disabled"
+                  data-i18n="project_demo_soon"
+                  >Demo coming soon</span
+                >
+              </div>
+            </article>
+
+            <article
+              class="project-showcase-card"
+              data-project-num="5"
+              data-image="mask.png"
+            >
+              <div class="project-showcase-cover">
+                <img
+                  src="assets/images/mask.png"
+                  alt="Mask detection app"
+                  width="640"
+                  height="360"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="project-showcase-body">
+                <h3 data-i18n="project_5_title">Mask Detection App</h3>
+                <p class="project-outcome" data-i18n="project_5_outcome">
+                  On-device AI app for mask detection and face recognition with
+                  real-time camera feedback.
+                </p>
+                <p class="project-value" data-i18n="project_5_value">
+                  Supports compliance and safety checks without sending video to
+                  external servers.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">Flutter</span
+                  ><span class="tech-tag">TensorFlow</span>
+                </div>
+                <span
+                  class="btn btn-secondary btn-sm btn-disabled"
+                  data-i18n="project_demo_soon"
+                  >Demo coming soon</span
+                >
+              </div>
+            </article>
+
+            <article
+              class="project-showcase-card"
+              data-project-num="7"
+              data-image="aiobject.png"
+            >
+              <div class="project-showcase-cover">
+                <img
+                  src="assets/images/aiobject.png"
+                  alt="AI object detection app"
+                  width="640"
+                  height="360"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="project-showcase-body">
+                <h3 data-i18n="project_7_title">AI Object Detection App</h3>
+                <p class="project-outcome" data-i18n="project_7_outcome">
+                  Real-time object detection and pose estimation with selectable
+                  on-device models (MobileNet, YOLOv2, PoseNet).
+                </p>
+                <p class="project-value" data-i18n="project_7_value">
+                  Demonstrates production-ready mobile ML pipelines for
+                  vision-based product ideas.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">Flutter</span
+                  ><span class="tech-tag">TensorFlow Lite</span>
+                </div>
+                <span
+                  class="btn btn-secondary btn-sm btn-disabled"
+                  data-i18n="project_demo_soon"
+                  >Demo coming soon</span
+                >
+              </div>
+            </article>
+
+            <article
+              class="project-showcase-card"
+              data-project-num="6"
+              data-image="farisam.png"
+            >
+              <div class="project-showcase-cover">
+                <img
+                  src="assets/images/farisam.png"
+                  alt="Farisam e-commerce app"
+                  width="640"
+                  height="360"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="project-showcase-body">
+                <h3 data-i18n="project_6_title">Farisam Commerce App</h3>
+                <p class="project-outcome" data-i18n="project_6_outcome">
+                  Mobile storefront for browsing catalog, placing orders, and
+                  managing product content.
+                </p>
+                <p class="project-value" data-i18n="project_6_value">
+                  Extends the brand’s reach with a native shopping experience
+                  tied to backend inventory.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">Flutter</span
+                  ><span class="tech-tag">Next.js</span>
+                </div>
+                <span
+                  class="btn btn-secondary btn-sm btn-disabled"
+                  data-i18n="project_demo_soon"
+                  >Demo coming soon</span
+                >
+              </div>
+            </article>
+
+            <article
+              class="project-showcase-card"
+              data-project-num="8"
+              data-image="shadiAvaran.png"
+            >
+              <div class="project-showcase-cover">
+                <img
+                  src="assets/images/shadiAvaran.png"
+                  alt="Shadi Avaran website"
+                  width="640"
+                  height="360"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="project-showcase-body">
+                <h3 data-i18n="project_8_title">Shadi Avaran</h3>
+                <p class="project-outcome" data-i18n="project_8_outcome">
+                  Promotional site with raffle flows and automated discount-code
+                  distribution for customers.
+                </p>
+                <p class="project-value" data-i18n="project_8_value">
+                  Drives engagement and repeat purchases without manual code
+                  management.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">Next.js</span
+                  ><span class="tech-tag">Laravel</span>
+                </div>
+                <span
+                  class="btn btn-secondary btn-sm btn-disabled"
+                  data-i18n="project_demo_soon"
+                  >Demo coming soon</span
+                >
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Workflow -->
+      <section
+        id="workflow"
+        class="section section-alt"
+        aria-labelledby="workflow-title"
+      >
+        <div class="container">
+          <div class="section-header">
+            <h2
+              id="workflow-title"
+              class="section-title"
+              data-i18n="workflow_title"
+            >
+              How I Work
+            </h2>
+            <p class="section-subtitle" data-i18n="workflow_subtitle">
+              A straightforward process built for speed and clarity.
+            </p>
+          </div>
+          <ol class="workflow-steps">
+            <li class="workflow-step">
+              <span class="workflow-step__num">01</span>
+              <h3 data-i18n="workflow_1_title">Understand the problem</h3>
+              <p data-i18n="workflow_1_desc">
+                Align on goals, users, constraints, and what success looks like.
+              </p>
+            </li>
+            <li class="workflow-step">
+              <span class="workflow-step__num">02</span>
+              <h3 data-i18n="workflow_2_title">Build a fast prototype</h3>
+              <p data-i18n="workflow_2_desc">
+                Ship something testable early so feedback informs the real
+                build.
+              </p>
+            </li>
+            <li class="workflow-step">
+              <span class="workflow-step__num">03</span>
+              <h3 data-i18n="workflow_3_title">Iterate quickly</h3>
+              <p data-i18n="workflow_3_desc">
+                Short cycles, clear communication, and focused scope per sprint.
+              </p>
+            </li>
+            <li class="workflow-step">
+              <span class="workflow-step__num">04</span>
+              <h3 data-i18n="workflow_4_title">Deploy and maintain</h3>
+              <p data-i18n="workflow_4_desc">
+                Production deployment, monitoring, and ongoing improvements.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- Social proof -->
+      <section id="proof" class="section" aria-labelledby="proof-title">
+        <div class="container">
+          <div class="section-header">
+            <h2 id="proof-title" class="section-title" data-i18n="proof_title">
+              Proof of Execution
+            </h2>
+            <p class="section-subtitle" data-i18n="proof_subtitle">
+              Shipped software matters more than promises.
+            </p>
+          </div>
+          <div class="proof-grid">
+            <div class="proof-stat">
+              <span class="proof-stat__value">9+</span>
+              <span class="proof-stat__label" data-i18n="proof_stat_projects"
+                >Products shipped</span
+              >
             </div>
-        </section>
-
-        <!-- Projects -->
-        <section id="projects" class="section" aria-labelledby="projects-title">
-            <div class="container">
-                <div class="section-header">
-                    <h2 id="projects-title" class="section-title" data-i18n="projects_title">Selected Work</h2>
-                    <p class="section-subtitle" data-i18n="projects_subtitle">Shipped products with measurable outcomes — not concept mockups.</p>
-                </div>
-                <div class="projects-showcase">
-
-                    <article class="project-showcase-card" data-project-num="1" data-image="placeholder">
-                        <div class="project-showcase-cover project-showcase-cover--placeholder" data-i18n="project_preview_coming_soon">Coming soon</div>
-                        <div class="project-showcase-body">
-                            <h3 data-i18n="project_1_title">Lotfi Piano</h3>
-                            <p class="project-outcome" data-i18n="project_1_outcome">E-commerce and service-request portal for a piano retailer with product catalog and support workflows.</p>
-                            <p class="project-value" data-i18n="project_1_value">Centralizes sales, technical support, and customer requests in one branded web experience.</p>
-                            <div class="project-tech"><span class="tech-tag">Next.js</span><span class="tech-tag">Laravel</span><span class="tech-tag">TypeScript</span></div>
-                            <span class="btn btn-secondary btn-sm btn-disabled" data-i18n="project_demo_soon">Demo coming soon</span>
-                        </div>
-                    </article>
-
-                    <article class="project-showcase-card" data-project-num="2" data-image="gomgashteh.png">
-                        <div class="project-showcase-cover">
-                            <img src="assets/images/gomgashteh.png" alt="Gomgashteh lost and found platform" width="640" height="360" loading="lazy" decoding="async">
-                        </div>
-                        <div class="project-showcase-body">
-                            <h3 data-i18n="project_2_title">Gomgashteh Platform</h3>
-                            <p class="project-outcome" data-i18n="project_2_outcome">Community platform for posting and recovering lost items with user matching and notifications.</p>
-                            <p class="project-value" data-i18n="project_2_value">Helps people reunite with belongings faster while keeping operations lightweight for a non-profit model.</p>
-                            <div class="project-tech"><span class="tech-tag">Flutter</span><span class="tech-tag">Laravel</span><span class="tech-tag">MySQL</span></div>
-                            <span class="btn btn-secondary btn-sm btn-disabled" data-i18n="project_demo_soon">Demo coming soon</span>
-                        </div>
-                    </article>
-
-                    <article class="project-showcase-card" data-project-num="3" data-image="pelakhaft.png">
-                        <div class="project-showcase-cover">
-                            <img src="assets/images/pelakhaft.png" alt="Pelak Haft customer management" width="640" height="360" loading="lazy" decoding="async">
-                        </div>
-                        <div class="project-showcase-body">
-                            <h3 data-i18n="project_3_title">Pelak Haft CRM</h3>
-                            <p class="project-outcome" data-i18n="project_3_outcome">Customer and event management system for a wedding services company with scheduling and client records.</p>
-                            <p class="project-value" data-i18n="project_3_value">Replaces scattered spreadsheets with one system staff use daily for bookings and follow-ups.</p>
-                            <div class="project-tech"><span class="tech-tag">Flutter</span><span class="tech-tag">Laravel</span><span class="tech-tag">PostgreSQL</span></div>
-                            <span class="btn btn-secondary btn-sm btn-disabled" data-i18n="project_demo_soon">Demo coming soon</span>
-                        </div>
-                    </article>
-
-                    <article class="project-showcase-card" data-project-num="4" data-image="khabamMiad.png">
-                        <div class="project-showcase-cover">
-                            <img src="assets/images/khabamMiad.png" alt="Khabam Miad sleep app" width="640" height="360" loading="lazy" decoding="async">
-                        </div>
-                        <div class="project-showcase-body">
-                            <h3 data-i18n="project_4_title">Khabam Miad</h3>
-                            <p class="project-outcome" data-i18n="project_4_outcome">Mobile app for sleep tracking, guided meditation, and habit-building around better rest.</p>
-                            <p class="project-value" data-i18n="project_4_value">Gives users daily insights and routines to improve sleep quality over time.</p>
-                            <div class="project-tech"><span class="tech-tag">Flutter</span><span class="tech-tag">Laravel</span></div>
-                            <span class="btn btn-secondary btn-sm btn-disabled" data-i18n="project_demo_soon">Demo coming soon</span>
-                        </div>
-                    </article>
-
-                    <article class="project-showcase-card" data-project-num="5" data-image="mask.png">
-                        <div class="project-showcase-cover">
-                            <img src="assets/images/mask.png" alt="Mask detection app" width="640" height="360" loading="lazy" decoding="async">
-                        </div>
-                        <div class="project-showcase-body">
-                            <h3 data-i18n="project_5_title">Mask Detection App</h3>
-                            <p class="project-outcome" data-i18n="project_5_outcome">On-device AI app for mask detection and face recognition with real-time camera feedback.</p>
-                            <p class="project-value" data-i18n="project_5_value">Supports compliance and safety checks without sending video to external servers.</p>
-                            <div class="project-tech"><span class="tech-tag">Flutter</span><span class="tech-tag">TensorFlow</span></div>
-                            <span class="btn btn-secondary btn-sm btn-disabled" data-i18n="project_demo_soon">Demo coming soon</span>
-                        </div>
-                    </article>
-
-                    <article class="project-showcase-card" data-project-num="7" data-image="aiobject.png">
-                        <div class="project-showcase-cover">
-                            <img src="assets/images/aiobject.png" alt="AI object detection app" width="640" height="360" loading="lazy" decoding="async">
-                        </div>
-                        <div class="project-showcase-body">
-                            <h3 data-i18n="project_7_title">AI Object Detection App</h3>
-                            <p class="project-outcome" data-i18n="project_7_outcome">Real-time object detection and pose estimation with selectable on-device models (MobileNet, YOLOv2, PoseNet).</p>
-                            <p class="project-value" data-i18n="project_7_value">Demonstrates production-ready mobile ML pipelines for vision-based product ideas.</p>
-                            <div class="project-tech"><span class="tech-tag">Flutter</span><span class="tech-tag">TensorFlow Lite</span></div>
-                            <span class="btn btn-secondary btn-sm btn-disabled" data-i18n="project_demo_soon">Demo coming soon</span>
-                        </div>
-                    </article>
-
-                    <article class="project-showcase-card" data-project-num="6" data-image="farisam.png">
-                        <div class="project-showcase-cover">
-                            <img src="assets/images/farisam.png" alt="Farisam e-commerce app" width="640" height="360" loading="lazy" decoding="async">
-                        </div>
-                        <div class="project-showcase-body">
-                            <h3 data-i18n="project_6_title">Farisam Commerce App</h3>
-                            <p class="project-outcome" data-i18n="project_6_outcome">Mobile storefront for browsing catalog, placing orders, and managing product content.</p>
-                            <p class="project-value" data-i18n="project_6_value">Extends the brand’s reach with a native shopping experience tied to backend inventory.</p>
-                            <div class="project-tech"><span class="tech-tag">Flutter</span><span class="tech-tag">Next.js</span></div>
-                            <span class="btn btn-secondary btn-sm btn-disabled" data-i18n="project_demo_soon">Demo coming soon</span>
-                        </div>
-                    </article>
-
-                    <article class="project-showcase-card" data-project-num="8" data-image="shadiAvaran.png">
-                        <div class="project-showcase-cover">
-                            <img src="assets/images/shadiAvaran.png" alt="Shadi Avaran website" width="640" height="360" loading="lazy" decoding="async">
-                        </div>
-                        <div class="project-showcase-body">
-                            <h3 data-i18n="project_8_title">Shadi Avaran</h3>
-                            <p class="project-outcome" data-i18n="project_8_outcome">Promotional site with raffle flows and automated discount-code distribution for customers.</p>
-                            <p class="project-value" data-i18n="project_8_value">Drives engagement and repeat purchases without manual code management.</p>
-                            <div class="project-tech"><span class="tech-tag">Next.js</span><span class="tech-tag">Laravel</span></div>
-                            <span class="btn btn-secondary btn-sm btn-disabled" data-i18n="project_demo_soon">Demo coming soon</span>
-                        </div>
-                    </article>
-
-                </div>
+            <div class="proof-stat">
+              <span class="proof-stat__value">5+</span>
+              <span class="proof-stat__label" data-i18n="proof_stat_years"
+                >Years building</span
+              >
             </div>
-        </section>
-
-        <!-- Workflow -->
-        <section id="workflow" class="section section-alt" aria-labelledby="workflow-title">
-            <div class="container">
-                <div class="section-header">
-                    <h2 id="workflow-title" class="section-title" data-i18n="workflow_title">How I Work</h2>
-                    <p class="section-subtitle" data-i18n="workflow_subtitle">A straightforward process built for speed and clarity.</p>
-                </div>
-                <ol class="workflow-steps">
-                    <li class="workflow-step"><span class="workflow-step__num">01</span><h3 data-i18n="workflow_1_title">Understand the problem</h3><p data-i18n="workflow_1_desc">Align on goals, users, constraints, and what success looks like.</p></li>
-                    <li class="workflow-step"><span class="workflow-step__num">02</span><h3 data-i18n="workflow_2_title">Build a fast prototype</h3><p data-i18n="workflow_2_desc">Ship something testable early so feedback informs the real build.</p></li>
-                    <li class="workflow-step"><span class="workflow-step__num">03</span><h3 data-i18n="workflow_3_title">Iterate quickly</h3><p data-i18n="workflow_3_desc">Short cycles, clear communication, and focused scope per sprint.</p></li>
-                    <li class="workflow-step"><span class="workflow-step__num">04</span><h3 data-i18n="workflow_4_title">Deploy and maintain</h3><p data-i18n="workflow_4_desc">Production deployment, monitoring, and ongoing improvements.</p></li>
-                </ol>
+            <div class="proof-stat">
+              <span class="proof-stat__value">AI</span>
+              <span class="proof-stat__label" data-i18n="proof_stat_ai"
+                >On-device &amp; API ML</span
+              >
             </div>
-        </section>
-
-        <!-- Social proof -->
-        <section id="proof" class="section" aria-labelledby="proof-title">
-            <div class="container">
-                <div class="section-header">
-                    <h2 id="proof-title" class="section-title" data-i18n="proof_title">Proof of Execution</h2>
-                    <p class="section-subtitle" data-i18n="proof_subtitle">Shipped software matters more than promises.</p>
-                </div>
-                <div class="proof-grid">
-                    <div class="proof-stat">
-                        <span class="proof-stat__value">9+</span>
-                        <span class="proof-stat__label" data-i18n="proof_stat_projects">Products shipped</span>
-                    </div>
-                    <div class="proof-stat">
-                        <span class="proof-stat__value">5+</span>
-                        <span class="proof-stat__label" data-i18n="proof_stat_years">Years building</span>
-                    </div>
-                    <div class="proof-stat">
-                        <span class="proof-stat__value">AI</span>
-                        <span class="proof-stat__label" data-i18n="proof_stat_ai">On-device &amp; API ML</span>
-                    </div>
-                    <div class="proof-stat">
-                        <span class="proof-stat__value">Full-stack</span>
-                        <span class="proof-stat__label" data-i18n="proof_stat_stack">Mobile + web + backend</span>
-                    </div>
-                </div>
-                <div class="proof-links">
-                    <a href="https://github.com/alinaderifar" class="proof-link" target="_blank" rel="noopener noreferrer" data-i18n="proof_github">View GitHub activity</a>
-                    <a href="#projects" class="proof-link" data-i18n="proof_screenshots">Browse project screenshots</a>
-                </div>
+            <div class="proof-stat">
+              <span class="proof-stat__value">Full-stack</span>
+              <span class="proof-stat__label" data-i18n="proof_stat_stack"
+                >Mobile + web + backend</span
+              >
             </div>
-        </section>
+          </div>
+          <div class="proof-links">
+            <a
+              href="https://github.com/alinaderifar"
+              class="proof-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-i18n="proof_github"
+              >View GitHub activity</a
+            >
+            <a href="#projects" class="proof-link" data-i18n="proof_screenshots"
+              >Browse project screenshots</a
+            >
+          </div>
+        </div>
+      </section>
 
-        <!-- Contact -->
-        <section id="contact" class="section section-alt" aria-labelledby="contact-title">
-            <div class="container">
-                <div class="section-header">
-                    <h2 id="contact-title" class="section-title" data-i18n="contact_title">Start a Project</h2>
-                    <p class="section-subtitle" data-i18n="contact_subtitle">Tell me what you are building. I reply within 24 hours on business days.</p>
-                </div>
-                <div class="contact-layout">
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <h4 data-i18n="contact_email">Email</h4>
-                            <a class="contact-link contact-link--primary" href="mailto:hello@alinaderifar.info">hello@alinaderifar.info</a>
-                        </div>
-                        <div class="contact-item">
-                            <h4 data-i18n="contact_telegram">Telegram</h4>
-                            <a class="btn btn-secondary contact-telegram" href="https://t.me/alinaderifar" target="_blank" rel="noopener noreferrer" data-i18n="contact_telegram_btn">Message on Telegram</a>
-                        </div>
-                        <div class="contact-item">
-                            <h4 data-i18n="contact_github">GitHub</h4>
-                            <a class="contact-link" href="https://github.com/alinaderifar" target="_blank" rel="noopener noreferrer">github.com/alinaderifar</a>
-                        </div>
-                    </div>
-                    <form id="contactForm" class="contact-form" novalidate>
-                        <div class="form-group">
-                            <label for="name" data-i18n="contact_name_label">Name</label>
-                            <input type="text" id="name" name="name" required autocomplete="name" data-i18n-placeholder="contact_name_placeholder">
-                        </div>
-                        <div class="form-group">
-                            <label for="email" data-i18n="contact_email_label">Email</label>
-                            <input type="email" id="email" name="email" required autocomplete="email" data-i18n-placeholder="contact_email_placeholder">
-                        </div>
-                        <div class="form-group">
-                            <label for="message" data-i18n="contact_message_label">Message</label>
-                            <textarea id="message" name="message" rows="5" required data-i18n-placeholder="contact_message_placeholder"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary" data-i18n="contact_btn">Send message</button>
-                    </form>
-                </div>
+      <!-- Contact -->
+      <section
+        id="contact"
+        class="section section-alt"
+        aria-labelledby="contact-title"
+      >
+        <div class="container">
+          <div class="section-header">
+            <h2
+              id="contact-title"
+              class="section-title"
+              data-i18n="contact_title"
+            >
+              Get In Touch
+            </h2>
+            <p class="section-subtitle" data-i18n="contact_subtitle">
+              Email or Telegram is the fastest way to reach me.
+            </p>
+          </div>
+          <div class="contact-info contact-info--standalone">
+            <div class="contact-item">
+              <h4 data-i18n="contact_email">Email</h4>
+              <a
+                class="contact-link contact-link--primary"
+                href="mailto:hello@alinaderifar.info"
+                >hello@alinaderifar.info</a
+              >
             </div>
-        </section>
+            <div class="contact-item">
+              <h4 data-i18n="contact_telegram">Telegram</h4>
+              <a
+                class="btn btn-secondary contact-telegram"
+                href="https://t.me/anadfar"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-i18n="contact_telegram_btn"
+                >Message on Telegram</a
+              >
+            </div>
+            <div class="contact-item">
+              <h4 data-i18n="contact_github">GitHub</h4>
+              <a
+                class="contact-link"
+                href="https://github.com/alinaderifar"
+                target="_blank"
+                rel="noopener noreferrer"
+                >github.com/alinaderifar</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="footer">
-        <div class="container">
-            <p data-i18n="footer_text">© Ali Naderifar — AI Automation &amp; Full-Stack Development</p>
-        </div>
+      <div class="container">
+        <p data-i18n="footer_text">
+          © Ali Naderifar — AI Automation &amp; Full-Stack Development
+        </p>
+      </div>
     </footer>
 
     <script type="module" src="assets/js/main.js"></script>
-</body>
+  </body>
 </html>

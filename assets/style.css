@@ -3911,17 +3911,19 @@ body.site-commercial .proof-link:hover {
   text-decoration: none;
 }
 
-body.site-commercial .contact-layout {
+body.site-commercial .contact-info--standalone {
   display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-  gap: clamp(2rem, 5vw, 3rem);
-  align-items: start;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+  max-width: 52rem;
+  margin: 0 auto;
 }
 
-body.site-commercial .contact-info {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+body.site-commercial .contact-info--standalone .contact-item {
+  padding: 1.5rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
 }
 
 body.site-commercial .contact-item h4 {
@@ -3942,53 +3944,6 @@ body.site-commercial .contact-link--primary {
 body.site-commercial .contact-telegram {
   display: inline-flex;
   margin-top: 0.15rem;
-}
-
-body.site-commercial .contact-form {
-  padding: clamp(1.25rem, 3vw, 2rem);
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-}
-
-body.site-commercial .contact-form .form-group {
-  margin-bottom: 1.15rem;
-}
-
-body.site-commercial .contact-form label {
-  display: block;
-  font-size: 0.8rem;
-  font-weight: 600;
-  margin-bottom: 0.4rem;
-  color: var(--text-secondary);
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-}
-
-body.site-commercial .contact-form input,
-body.site-commercial .contact-form textarea {
-  width: 100%;
-  padding: 0.8rem 1rem;
-  background: var(--bg);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
-  color: var(--text);
-  font-family: inherit;
-  font-size: 1rem;
-  transition: border-color 0.2s ease;
-}
-
-body.site-commercial .contact-form input:focus,
-body.site-commercial .contact-form textarea:focus {
-  outline: none;
-  border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
-}
-
-body.site-commercial .contact-form .btn-primary {
-  width: 100%;
-  justify-content: center;
-  margin-top: 0.25rem;
 }
 
 body.site-commercial .footer {
@@ -4041,9 +3996,7 @@ html.js-scroll-reveal body.site-commercial #home.scroll-reveal:not(.is-visible) 
     order: unset;
   }
 
-  body.site-commercial .contact-layout {
-    grid-template-columns: 1fr;
-  }
+
 }
 
 @media (max-width: 768px) {

@@ -8,7 +8,7 @@ let onLoadReveal = null;
 
 const SECTION_SELECTORS = '#home';
 const REVEAL_SELECTORS =
-  '.section-header, .build-card, .service-column, .project-showcase-card, .workflow-step, .proof-stat, .proof-links, .contact-layout';
+  '.section-header, .build-card, .service-column, .project-showcase-card, .workflow-step, .proof-stat, .proof-links, .contact-info--standalone .contact-item';
 
 function revealElement(el) {
   el.classList.add('is-visible');

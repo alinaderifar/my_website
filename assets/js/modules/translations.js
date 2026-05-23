@@ -93,19 +93,12 @@ const translations = {
     proof_github: "View GitHub activity",
     proof_screenshots: "Browse project screenshots",
 
-    contact_title: "Start a Project",
-    contact_subtitle: "Tell me what you are building. I reply within 24 hours on business days.",
+    contact_title: "Get In Touch",
+    contact_subtitle: "Email or Telegram is the fastest way to reach me.",
     contact_email: "Email",
     contact_telegram: "Telegram",
     contact_telegram_btn: "Message on Telegram",
     contact_github: "GitHub",
-    contact_name_label: "Name",
-    contact_email_label: "Email",
-    contact_message_label: "Message",
-    contact_name_placeholder: "Your name",
-    contact_email_placeholder: "you@company.com",
-    contact_message_placeholder: "Briefly describe your project, timeline, and budget range.",
-    contact_btn: "Send message",
 
     footer_text: "© Ali Naderifar — AI Automation & Full-Stack Development",
     form_sending: "Sending...",
@@ -201,19 +194,12 @@ const translations = {
     proof_github: "فعالیت گیت‌هاب",
     proof_screenshots: "مشاهده اسکرین‌شات پروژه‌ها",
 
-    contact_title: "شروع پروژه",
-    contact_subtitle: "بگویید چه می‌سازید. در روزهای کاری ظرف ۲۴ ساعت پاسخ می‌دهم.",
+    contact_title: "تماس",
+    contact_subtitle: "ایمیل یا تلگرام سریع‌ترین راه ارتباط است.",
     contact_email: "ایمیل",
     contact_telegram: "تلگرام",
     contact_telegram_btn: "پیام در تلگرام",
     contact_github: "گیت‌هاب",
-    contact_name_label: "نام",
-    contact_email_label: "ایمیل",
-    contact_message_label: "پیام",
-    contact_name_placeholder: "نام شما",
-    contact_email_placeholder: "you@company.com",
-    contact_message_placeholder: "پروژه، زمان‌بندی و بودجه را کوتاه توضیح دهید.",
-    contact_btn: "ارسال پیام",
 
     footer_text: "© علی نادری‌فر — اتوماسیون هوش مصنوعی و توسعه فول‌استک",
     form_sending: "در حال ارسال...",
@@ -309,19 +295,12 @@ const translations = {
     proof_github: "نشاط GitHub",
     proof_screenshots: "تصفح لقطات المشاريع",
 
-    contact_title: "ابدأ مشروعاً",
-    contact_subtitle: "أخبرني بما تبنيه. أرد خلال 24 ساعة في أيام العمل.",
+    contact_title: "تواصل معي",
+    contact_subtitle: "البريد أو تيليجرام أسرع طريقة للوصول إلي.",
     contact_email: "البريد",
     contact_telegram: "تيليجرام",
     contact_telegram_btn: "راسلني على تيليجرام",
     contact_github: "GitHub",
-    contact_name_label: "الاسم",
-    contact_email_label: "البريد",
-    contact_message_label: "الرسالة",
-    contact_name_placeholder: "اسمك",
-    contact_email_placeholder: "you@company.com",
-    contact_message_placeholder: "صف المشروع والجدول الزمني والميزانية بإيجاز.",
-    contact_btn: "إرسال الرسالة",
 
     footer_text: "© علي نادري فر — أتمتة الذكاء الاصطناعي وتطوير فول ستاك",
     form_sending: "جاري الإرسال...",
@@ -397,17 +376,8 @@ function updateProjects(t) {
   });
 }
 
-function updateContact(t) {
-  const form = document.getElementById('contactForm');
-  if (!form) return;
-  const nameInput = form.querySelector('#name');
-  const emailInput = form.querySelector('#email');
-  const messageInput = form.querySelector('#message');
-  const submitBtn = form.querySelector('.btn-primary');
-  if (nameInput) nameInput.placeholder = t.contact_name_placeholder;
-  if (emailInput) emailInput.placeholder = t.contact_email_placeholder;
-  if (messageInput) messageInput.placeholder = t.contact_message_placeholder;
-  if (submitBtn) submitBtn.textContent = t.contact_btn;
+function updateContact(_t) {
+  /* Contact section is info-only; titles use data-i18n */
 }
 
 function setupLanguageSwitcher() {
